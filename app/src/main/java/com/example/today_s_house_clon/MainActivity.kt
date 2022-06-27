@@ -27,6 +27,17 @@ class MainActivity : AppCompatActivity() {
         // 처음시작 프래그먼트
         setFragment(TAG_HOME,HomeFragment())
 
+        // 프래그먼트 클릭리스너
+        binding.mainBottomNav.setOnItemSelectedListener { item ->
+            when(item.itemId) {
+                R.id.home -> setFragment(TAG_HOME, HomeFragment())
+                R.id.store -> setFragment(TAG_STORE, StoreFragment())
+                R.id.home_service -> setFragment(TAG_HOME_SERVICE, HomeServiceFragment())
+                R.id.mypage -> setFragment(TAG_MY_PAGE, MyPageFragment())
+            }
+            true
+        }
+
 
     }
 
