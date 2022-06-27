@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".main.MainActivity">
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/main_appbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="50dp"
         android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:elevation="0dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -26,7 +27,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/radius_corner_btn_login"
-                android:backgroundTint="#E2E1E2"
+                android:backgroundTint="#EDECED"
                 android:layout_weight="8"
                 android:hint="오늘의집 통합 검색"
                 android:drawableLeft="@drawable/ic_search_custom"
@@ -77,6 +78,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:gravity="bottom"
         tools:ignore="BottomAppBar"
+        app:backgroundTint="@color/white"
         >
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -102,7 +104,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:menu="@menu/nav_menu"
             app:labelVisibilityMode="labeled"
-            app:backgroundTint="#00F4F4F4"
-            app:elevation="0dp"/>
+            app:elevation="0dp"
+            app:itemRippleColor="#00FFFFFF"
+            app:itemIconSize="28dp"
+            android:background="@color/white"/>
+
     </com.google.android.material.bottomappbar.BottomAppBar>
 </androidx.constraintlayout.widget.ConstraintLayout>

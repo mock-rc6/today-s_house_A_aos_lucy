@@ -1,12 +1,16 @@
-package com.example.today_s_house_clon
+package com.example.today_s_house_clon.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import com.example.today_s_house_clon.R
 import com.example.today_s_house_clon.databinding.ActivityMainBinding
+import com.example.today_s_house_clon.main.home.HomeFragment
+import com.example.today_s_house_clon.main.homeService.HomeServiceFragment
+import com.example.today_s_house_clon.main.myPage.MyPageFragment
+import com.example.today_s_house_clon.main.store.StoreFragment
 
 private const val TAG_HOME = "home_fragment"
 private const val TAG_STORE = "store_fragment"
@@ -26,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         binding.mainBottomNav.itemIconTintList = null
 
         // 처음시작 프래그먼트
-        setFragment(TAG_HOME,HomeFragment())
+        setFragment(TAG_HOME, HomeFragment())
 
         // 프래그먼트 클릭리스너
         binding.mainBottomNav.setOnItemSelectedListener { item ->
