@@ -10,7 +10,8 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
 
-
+    <!--main color    -->
+    <color name="main_color">#58BAE6</color>
 
 
 </resources>

@@ -4,15 +4,26 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/btn_login_radius_corner.xml" value="0.107" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_add.xml" value="0.132" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_apple_logo.xml" value="0.107" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_arrow_drop_down.xml" value="0.1485" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_circle_add.xml" value="0.1485" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_facebook_logo.xml" value="0.154" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_home_selector.xml" value="0.142" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_home_service_selector.xml" value="0.201" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1485" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_mypage_selector.xml" value="0.201" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_notion_ballon.xml" value="0.1485" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_search_custom.xml" value="0.201" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_store_selector.xml" value="0.201" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/img_kakao_logo.xml" value="0.107" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/activity_login.xml" value="0.264" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/activity_main.xml" value="0.2390625" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/fragment_home.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/fragment_home_service.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/fragment_my_page.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/menu/nav_menu.xml" value="0.253125" />
       </map>
     </option>
   </component>
