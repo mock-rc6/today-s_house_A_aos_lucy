@@ -80,6 +80,7 @@
         >
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/main_floating_btn"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_add"
@@ -88,7 +89,9 @@
             android:layout_gravity="end|center_vertical"
             android:layout_marginEnd="20dp"
             android:layout_marginStart="20dp"
-            android:elevation="0dp"/>
+            app:elevation="0dp"
+            app:tint="@color/white"
+            />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/main_bottom_nav"
@@ -99,7 +102,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:menu="@menu/nav_menu"
             app:labelVisibilityMode="labeled"
-            android:background="#F1F1F1"
-            />
+            app:backgroundTint="#00F4F4F4"
+            app:elevation="0dp"/>
     </com.google.android.material.bottomappbar.BottomAppBar>
 </androidx.constraintlayout.widget.ConstraintLayout>
