@@ -1,13 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".main.home.InterestFragment">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="인기" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <!--     움직이는 광고-->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_home_interest_advertisement"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_home_interest_first"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vp_home_interest_advertisement"
+            tools:listitem="@layout/item_home_interest_top_btn" />
+
+        <View
+            android:id="@+id/home_interest_space_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_10"
+            android:background="@color/space_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_home_interest_first" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_home_interest_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_interest_space_1"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_home_interest_viewer" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_home_interest_more"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:background="@drawable/radius_corner_btn"
+            android:backgroundTint="@color/space_color"
+            android:text="더보기"
+            android:textColor="@color/blackForText"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_home_interest_second" />
+
+        <View
+            android:id="@+id/home_interest_space_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_10"
+            android:layout_marginTop="40dp"
+            android:background="@color/space_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_home_interest_more" />
+
+        <TextView
+            android:id="@+id/tv_home_interest_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="40dp"
+            android:text="카테고리별 상품 찾기"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_interest_space_2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_home_interest_third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_home_interest_title"
+            tools:itemCount="16"
+            tools:listitem="@layout/item_home_interest_horizontal" />
+
+        <View
+            android:id="@+id/home_interest_space_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_10"
+            android:layout_marginTop="40dp"
+            android:background="@color/space_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_home_interest_third" />
+
+        <LinearLayout
+            android:id="@+id/ll_home_interest_today_deal_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_interest_space_3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="오늘의 딜"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_gravity="start"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_arrow"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_home_interest_today_deal_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_home_interest_today_deal_title">
+
+            <ImageView
+                android:id="@+id/iv_home_interest_today_deal"
+                android:layout_width="180dp"
+                android:layout_height="200dp"
+                android:background="@drawable/radius_corner_img"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:layout_marginStart="20dp">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/radius_corner_img"
+                    android:backgroundTint="#D47174"
+                    android:text="5일 남음"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="삼성 스마트모니터 M5 S32BM501 32인치 IoT 화이트 넷플릭스"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_color_black"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="26%"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:textColor="#D37173"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="특가 351개 보기 >"
+                    android:textColor="#D37173"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/home_interest_space_4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_10"
+            android:layout_marginTop="20dp"
+            android:background="@color/space_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_home_interest_today_deal_contents" />
+
+        <include
+            android:id="@+id/include_viewer"
+            layout="@layout/item_home_interest_viewer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/home_interest_space_4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_home_interest_more_2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:background="@drawable/radius_corner_btn"
+            android:backgroundTint="@color/space_color"
+            android:text="더보기"
+            android:textColor="@color/blackForText"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/include_viewer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
