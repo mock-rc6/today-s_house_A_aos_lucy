@@ -32,6 +32,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
             <ImageButton
+                android:id="@+id/btn_login_back_arrow"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/ic_back_arrow"
@@ -57,7 +58,7 @@
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
         android:hint="이메일"
         android:textSize="15sp"
-        android:background="@drawable/custom_login_input"
+        android:background="@drawable/custom_login_input_background"
         android:paddingStart="15dp"
         android:layout_marginTop="@dimen/activity_vertical_margin"/>
 
@@ -72,7 +73,7 @@
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
         android:hint="비밀번호"
         android:textSize="15sp"
-        android:background="@drawable/custom_login_input"
+        android:background="@drawable/custom_login_input_background"
         android:paddingStart="15dp"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:inputType="textPassword|numberPassword"/>
