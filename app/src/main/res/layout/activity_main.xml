@@ -17,13 +17,24 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="15dp"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="15dp"
             android:orientation="horizontal">
 
+            <ImageButton
+                android:id="@+id/btn_menu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_menu"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:visibility="gone"/>
+
             <EditText
+                android:id="@+id/et_input"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/radius_corner_btn"
@@ -34,9 +45,10 @@
                 android:drawablePadding="5dp"
                 android:paddingStart="10dp"
                 android:textSize="13sp"
-                />
+                android:layout_marginStart="@dimen/activity_horizontal_margin"/>
 
             <ImageButton
+                android:id="@+id/btn_clip"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_clip"
@@ -47,6 +59,7 @@
                 android:layout_weight="1"/>
 
             <ImageButton
+                android:id="@+id/btn_basket"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_basket"
@@ -54,7 +67,8 @@
                 android:scaleType="centerInside"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="10dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
 
         </LinearLayout>
 

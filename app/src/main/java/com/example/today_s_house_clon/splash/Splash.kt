@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.example.today_s_house_clon.main.LoginActivity
+import com.example.today_s_house_clon.main.login.JoinMembershipActivity
 import com.example.today_s_house_clon.R
 
 class Splash : AppCompatActivity() {
@@ -12,7 +12,7 @@ class Splash : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         Handler().postDelayed({
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, JoinMembershipActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
             finish()

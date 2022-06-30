@@ -3,10 +3,11 @@
     <!--    엑티비티 기본 마진-->
     <dimen name="activity_horizontal_margin">15dp</dimen>
     <dimen name="activity_vertical_margin">15dp</dimen>
+    <dimen name="between_title_dimen">30dp</dimen>
 
     <!--    text size-->
     <dimen name="text_size_13">13sp</dimen>
-    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="title_text">20sp</dimen>
 
     <!--    프래그먼트 메뉴 간 간격-->
     <dimen name="space_10">10dp</dimen>
