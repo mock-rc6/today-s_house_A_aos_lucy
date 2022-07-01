@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.login.JoinMembershipActivity">
+    tools:context=".src.main.login.JoinMembershipActivity">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_kakao_login"

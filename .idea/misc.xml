@@ -6,6 +6,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/bottom_nav_selector_color.xml" value="0.143" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/btn_login_radius_corner.xml" value="0.107" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/custom_login_input.xml" value="0.2045" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/custom_login_input_background_caution.xml" value="0.2045" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/custom_product_item_background.xml" value="0.143" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_add.xml" value="0.132" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_apple_logo.xml" value="0.107" />
@@ -23,9 +24,12 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/img_kakao_logo.xml" value="0.107" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/radius_corner_btn.xml" value="0.143" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/radius_corner_img.xml" value="0.143" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/activity_join.xml" value="0.25" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/activity_join_via_email.xml" value="0.264" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/dialog_loading.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/fragment_expert_housewarming.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/fragment_following.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/fragment_home.xml" value="0.2" />

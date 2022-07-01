@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".main.home.InterestFragment">
+    tools:context=".src.main.home.tab.InterestFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -215,7 +215,8 @@
             android:background="@color/space_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ll_home_interest_today_deal_contents" />
+            app:layout_constraintTop_toBottomOf="@+id/ll_home_interest_today_deal_contents"
+            android:layout_marginTop="30dp"/>
 
         <include
             android:id="@+id/include_viewer_1"

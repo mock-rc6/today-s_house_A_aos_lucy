@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.home.HousewarmingFragment">
+    tools:context=".src.main.home.tab.HousewarmingFragment">
 
     <TextView
         android:layout_width="match_parent"
