@@ -8,15 +8,17 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
 
-    <color name="whiteForBackground">#FFFFFF</color>
-    <color name="blackForText">#4a4a4a</color>
-    <color name="redForText">#d9534f</color>
-
     <!--main color    -->
     <color name="main_color">#58BAE6</color>
+    <color name="main_color_before_selector">#A9D3E8</color>
 
     <!--text color    -->
     <color name="text_color_black">#343334</color>
+    <color name="text_color_white">#E7ECF0</color>
+    <color name="text_color_caution">#CF9899</color>
+    <color name="text_color_gray">#B4B3B5</color>
+    <color name="text_color_dark_gray">#969596</color>
+
 
     <!--space color    -->
     <color name="space_color">#E6E4E8</color>

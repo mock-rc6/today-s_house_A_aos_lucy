@@ -9,6 +9,34 @@
     <string name="login_problem">로그인에 문제가 있으신가요?</string>
     <string name="login_bottom">비회원 주문 조회하기</string>
 
+    <!--join Activity-->
+    <string name="join_title">이메일로 회원가입</string>
+    <string name="join_1">인테리어 전문가이시다면 ＞</string>
+    <string name="join_2">이메일</string>
+    <string name="join_3">이메일을 입력해주세요.</string>
+    <string name="join_4">이메일 인증하기</string>
+    <string name="join_5">비밀번호</string>
+    <string name="join_6">비밀번호는 영문,숫자를 포함하여 8자 이상이어야 합니다.</string>
+    <string name="join_7">비밀번호 확인</string>
+    <string name="join_8">확인을 위해 비밀번호를 한 번 더 입력해주세요.</string>
+    <string name="join_9">별명(중복불가)</string>
+    <string name="join_10">별명을 2~15자 내로 입력해주세요.</string>
+    <string name="join_11">약관 동의</string>
+    <string name="join_12">전체동의</string>
+    <string name="join_13">만 14세 이상입니다.</string>
+    <string name="join_essential">(필수)</string>
+    <string name="join_14">이용약관</string>
+    <string name="join_15">개인정보수집 및 이용동의</string>
+    <string name="join_16">이벤트, 쿠폰, 특가 알림 메일, 앱푸시 및 SMS 등 수신\n(선택)</string>
+    <string name="join_17">이용약관, 개인정보처리방침에 동의해주세요.</string>
+    <string name="join_18">친구에게 추천받고 오셨나요?(선택사항)</string>
+    <string name="join_19">추천코드 입력</string>
+    <string name="join_20">확인</string>
+    <string name="join_final">회원가입 완료</string>
+    <string name="join_essential_notion">필수 사항을 확인해주세요.</string>
+    <string name=""></string>
+
+
     <!--home fragment-->
     <string name="shopping">쇼핑하기</string>
     <string name="rv_title">싱글을 위한 집들이</string>
