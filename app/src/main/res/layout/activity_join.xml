@@ -214,7 +214,7 @@
                     android:inputType="textEmailAddress"/>
 
                 <TextView
-                    android:id="@+id/tv_join_input_nickname"
+                    android:id="@+id/tv_join_input_nickname_caution"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:text="별명을 2~15자 내로 입력해주세요"
