@@ -37,7 +37,7 @@
                 android:id="@+id/et_input"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/radius_corner_btn"
+                android:background="@drawable/custom_radius_corner_btn"
                 android:backgroundTint="#EDECED"
                 android:layout_weight="8"
                 android:hint="오늘의집 통합 검색"

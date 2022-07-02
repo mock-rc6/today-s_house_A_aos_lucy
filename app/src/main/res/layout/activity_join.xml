@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".src.main.login.JoinActivity">
+    tools:context=".src.main.login.join.JoinActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/abl_join"
@@ -113,8 +113,7 @@
                 android:id="@+id/btn_join_email_authentication"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/radius_corner_btn"
-                android:backgroundTint="#E8E7E8"
+                android:background="@drawable/custom_radius_corner_btn_color_gray"
                 android:text="@string/join_4"
                 android:textColor="@color/text_color_gray"
                 android:textStyle="bold"
@@ -469,8 +468,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="50dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/radius_corner_btn"
-                    android:backgroundTint="@color/main_color_before_selector"
+                    android:background="@drawable/custom_radius_corner_btn_color_main_before_select"
                     android:layout_marginStart="@dimen/activity_horizontal_margin"
                     android:layout_marginEnd="@dimen/activity_horizontal_margin"
                     android:text="@string/join_20"
@@ -483,8 +481,7 @@
                 android:id="@+id/btn_join"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/radius_corner_btn"
-                android:backgroundTint="@color/main_color_before_selector"
+                android:background="@drawable/custom_radius_corner_btn_color_main_before_select"
                 android:text="@string/join_final"
                 android:textColor="@color/text_color_white"
                 android:textStyle="bold"

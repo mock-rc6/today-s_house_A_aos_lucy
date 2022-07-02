@@ -1,8 +1,9 @@
-package com.example.today_s_house_clon.src.main.login
+package com.example.today_s_house_clon.src.main.login.join
 
 import com.example.today_s_house_clon.config.ApplicationClass
-import com.example.today_s_house_clon.src.main.login.models.PostSignUpRequest
-import com.example.today_s_house_clon.src.main.login.models.SignUpResponse
+import com.example.today_s_house_clon.src.main.login.MembershipRetrofitInterface
+import com.example.today_s_house_clon.src.main.login.join.models.PostSignUpRequest
+import com.example.today_s_house_clon.src.main.login.join.models.SignUpResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

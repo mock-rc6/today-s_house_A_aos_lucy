@@ -1,4 +1,4 @@
-package com.example.today_s_house_clon.src.main.login
+package com.example.today_s_house_clon.src.main.login.join
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,15 +8,16 @@ import android.util.Log
 import android.view.View
 import android.widget.CompoundButton
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import com.example.today_s_house_clon.R
 import com.example.today_s_house_clon.config.BaseActivity
 import com.example.today_s_house_clon.databinding.ActivityJoinBinding
-import com.example.today_s_house_clon.src.main.login.models.PostSignUpRequest
-import com.example.today_s_house_clon.src.main.login.models.SignUpResponse
+import com.example.today_s_house_clon.src.main.login.join.models.PostSignUpRequest
+import com.example.today_s_house_clon.src.main.login.join.models.SignUpResponse
 import java.util.regex.Pattern
 
 class JoinActivity : BaseActivity<ActivityJoinBinding>(ActivityJoinBinding::inflate),
-JoinActivityInterface{
+    JoinActivityInterface {
 
     lateinit var joinEmail : TextView
     lateinit var joinPassword : TextView
@@ -50,6 +51,7 @@ JoinActivityInterface{
             }
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 checkEmail()
+                changeButtonBackground()
             }
             override fun afterTextChanged(p0: Editable?) {
                 // text 변경 후 호출
@@ -61,6 +63,7 @@ JoinActivityInterface{
             }
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 checkPassword()
+                changeButtonBackground()
             }
             override fun afterTextChanged(p0: Editable?) {
                 // text 변경 후 호출
@@ -72,6 +75,7 @@ JoinActivityInterface{
             }
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 recheckPassword()
+                changeButtonBackground()
             }
             override fun afterTextChanged(p0: Editable?) {
                 // text 변경 후 호출
@@ -83,6 +87,7 @@ JoinActivityInterface{
             }
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 checkNickName()
+                changeButtonBackground()
             }
             override fun afterTextChanged(p0: Editable?) {
                 // text 변경 후 호출
@@ -102,10 +107,8 @@ JoinActivityInterface{
                 val postRequest = PostSignUpRequest(email = email, name = name, password = password)
                 showLoadingDialog(this)
                 JoinService(this).tryPostSignUp(postRequest)
-                showCustomToast("성공")
             }
         }
-
 
     }
 
@@ -118,6 +121,12 @@ JoinActivityInterface{
                     binding.joinCheck3.isChecked = true
                     binding.joinCheck4.isChecked = true
                     binding.joinCheck5.isChecked = true
+
+                    binding.llClause.setBackgroundResource(R.drawable.custom_login_input_background)
+                    binding.tvJoinClauseCaution.visibility = View.GONE
+
+                    changeButtonBackground()
+
                 }else {
                     binding.joinCheck2.isChecked = false
                     binding.joinCheck3.isChecked = false
@@ -126,6 +135,9 @@ JoinActivityInterface{
 
                     binding.llClause.setBackgroundResource(R.drawable.custom_login_input_background_caution)
                     binding.tvJoinClauseCaution.visibility = View.VISIBLE
+
+                    changeButtonBackground()
+
                 }
             }
             // 필수 체크박스 요소 중 하나라도 체크 안된 상태면 경고문 표시
@@ -133,9 +145,15 @@ JoinActivityInterface{
                 if (binding.joinCheck2.isChecked && binding.joinCheck3.isChecked && binding.joinCheck4.isChecked) {
                     binding.llClause.setBackgroundResource(R.drawable.custom_login_input_background)
                     binding.tvJoinClauseCaution.visibility = View.GONE
+
+                    changeButtonBackground()
+
                 }else {
                     binding.llClause.setBackgroundResource(R.drawable.custom_login_input_background_caution)
                     binding.tvJoinClauseCaution.visibility = View.VISIBLE
+
+                    changeButtonBackground()
+
                 }
             }
             // 전체동의 박스를 체크하지 않더라도 하나하나 다 선택하면 전체 동의도 체크
@@ -145,6 +163,12 @@ JoinActivityInterface{
                         && binding.joinCheck3.isChecked
                         && binding.joinCheck4.isChecked
                         && binding.joinCheck5.isChecked)
+
+                binding.llClause.setBackgroundResource(R.drawable.custom_login_input_background)
+                binding.tvJoinClauseCaution.visibility = View.GONE
+
+                changeButtonBackground()
+
             }
         }
     }
@@ -159,8 +183,17 @@ JoinActivityInterface{
         return checkEmail() && checkPassword() && recheckPassword() && checkNickName()
     }
 
+    private fun changeButtonBackground() {
+        if (essentialCheckBox() && essentialInputData() ) {
+            binding.btnJoin.setBackgroundResource(R.drawable.custom_radius_corner_btn_color_main)
+        }else{
+            binding.btnJoin.setBackgroundResource(R.drawable.custom_radius_corner_btn_color_main_before_select)
+        }
+    }
+
 
     // 이메일 형식 확인 메서드
+    @SuppressLint("ResourceAsColor")
     private fun checkEmail(): Boolean {
         val email = joinEmail.text.toString().trim() // 공백 제거
         val match = Pattern.matches(emailValidation, email) // 이메일 패턴과 일치하는지
@@ -168,6 +201,11 @@ JoinActivityInterface{
             // 이메일 패턴 일치시
             binding.llInputEmail.setBackgroundResource(R.drawable.custom_login_input_background)
             binding.tvJoinInputEmailCaution.visibility = View.GONE
+
+            // 버튼 색상 변경
+            binding.btnJoinEmailAuthentication.setBackgroundResource(R.drawable.custom_radius_corner_main_color_stroke)
+            binding.btnJoinEmailAuthentication.setTextColor(ContextCompat.getColor(this, R.color.main_color))
+
             return true
 
         } else {
@@ -180,6 +218,10 @@ JoinActivityInterface{
                 binding.tvJoinInputEmailCaution.text = "이메일 형식이 올바르지 않습니다."
             }
             binding.tvJoinInputEmailCaution.visibility = View.VISIBLE // 경고문 띄우기
+
+            // 버튼 색상 변경
+            binding.btnJoinEmailAuthentication.setBackgroundResource(R.drawable.custom_radius_corner_btn_color_gray)
+            binding.btnJoinEmailAuthentication.setTextColor(ContextCompat.getColor(this, R.color.text_color_dark_gray))
 
             return false
         }
@@ -234,10 +276,9 @@ JoinActivityInterface{
         }
     }
 
-    // 별명 일치 확인 메서드
-    @SuppressLint("SetTextI18n")
+    // 별명 입력 확인 메서드
     private fun checkNickName(): Boolean {
-        val nickName = recheckPassword.text.toString().trim() // 공백 제거
+        val nickName = joinNickName.text.toString().trim() // 공백 제거
 
         // 별명길이
         if (nickName.length < 3 || nickName.length > 15 || nickName.isEmpty()) {
@@ -256,16 +297,17 @@ JoinActivityInterface{
 
     override fun onPostSignUpSuccess(response: SignUpResponse) {
         dismissLoadingDialog()
-        val id = response.result.userId
-        val jwt = response.result.jwt
-
-
+        // intent
+        // sp
+//        val id = response.result.userId
+//        val jwt = response.result.jwt
+        // 회원가입 Activity 종료 후 메인화면으로 이동
+        finish()
     }
 
     override fun onPostSignUpFailure(message: String) {
         dismissLoadingDialog()
         Log.d("TAG", "오류 : $message")
-        showCustomToast("오류 : $message")
     }
 
 

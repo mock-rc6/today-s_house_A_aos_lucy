@@ -162,7 +162,7 @@
                 android:id="@+id/iv_home_interest_today_deal"
                 android:layout_width="180dp"
                 android:layout_height="200dp"
-                android:background="@drawable/radius_corner_img"/>
+                android:background="@drawable/custom_radius_corner_img"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -173,7 +173,7 @@
                 <TextView
                     android:layout_width="60dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/radius_corner_img"
+                    android:background="@drawable/custom_radius_corner_img"
                     android:backgroundTint="#D47174"
                     android:text="5일 남음"
                     android:textSize="13sp"
@@ -367,7 +367,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:background="@drawable/radius_corner_btn"
+            android:background="@drawable/custom_radius_corner_btn"
             android:backgroundTint="@color/space_color"
             android:text="인테리어 시공업체 더 찾기"
             android:textColor="@color/blackForText"

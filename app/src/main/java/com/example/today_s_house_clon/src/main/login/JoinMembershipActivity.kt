@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.example.today_s_house_clon.config.BaseActivity
 import com.example.today_s_house_clon.databinding.ActivityJoinMembershipBinding
 import com.example.today_s_house_clon.src.main.MainActivity
+import com.example.today_s_house_clon.src.main.login.join.JoinActivity
 
 class JoinMembershipActivity :BaseActivity<ActivityJoinMembershipBinding>(ActivityJoinMembershipBinding::inflate) {
 

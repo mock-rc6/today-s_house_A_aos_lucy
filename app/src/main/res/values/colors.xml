@@ -23,4 +23,7 @@
     <!--space color    -->
     <color name="space_color">#E6E4E8</color>
 
+
+    <!--button color    -->
+    <color name="btn_gray">#E8E7E8</color>
 </resources>

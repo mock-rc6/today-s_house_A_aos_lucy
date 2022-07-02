@@ -21,7 +21,7 @@
         android:id="@+id/iv_home_interest_viewer_1"
         android:layout_width="180dp"
         android:layout_height="180dp"
-        android:background="@drawable/radius_corner_img"
+        android:background="@drawable/custom_radius_corner_img"
         app:layout_constraintTop_toBottomOf="@+id/tv_home_interest_title"
         android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="@+id/tv_home_interest_title"/>
@@ -42,7 +42,7 @@
         android:id="@+id/iv_home_interest_viewer_2"
         android:layout_width="180dp"
         android:layout_height="180dp"
-        android:background="@drawable/radius_corner_img"
+        android:background="@drawable/custom_radius_corner_img"
         app:layout_constraintTop_toTopOf="@id/iv_home_interest_viewer_1"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="15dp"/>
@@ -63,7 +63,7 @@
         android:id="@+id/iv_home_interest_viewer_3"
         android:layout_width="180dp"
         android:layout_height="180dp"
-        android:background="@drawable/radius_corner_img"
+        android:background="@drawable/custom_radius_corner_img"
         app:layout_constraintTop_toBottomOf="@id/tv_home_interest_viewer_1"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="@id/tv_home_interest_viewer_1" />
@@ -87,7 +87,7 @@
         android:id="@+id/iv_home_interest_viewer_4"
         android:layout_width="180dp"
         android:layout_height="180dp"
-        android:background="@drawable/radius_corner_img"
+        android:background="@drawable/custom_radius_corner_img"
         app:layout_constraintStart_toStartOf="@id/iv_home_interest_viewer_2"
         app:layout_constraintTop_toTopOf="@id/iv_home_interest_viewer_3"
         />
@@ -110,7 +110,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:background="@drawable/radius_corner_btn"
+        android:background="@drawable/custom_radius_corner_btn"
         android:backgroundTint="@color/space_color"
         android:text="더보기"
         android:textColor="@color/blackForText"
