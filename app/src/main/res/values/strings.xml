@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">today_s_house_clon</string>
 
-    <!--login Activity-->
-    <string name="login_top">지금 가입하면 최대 10만원\n쿠폰증정!</string>
-    <string name="login_kakao">카카오톡으로 계속하기</string>
-    <string name="login_email">이메일로 로그인</string>
-    <string name="login_join_to_email">이메일로 가입</string>
-    <string name="login_problem">로그인에 문제가 있으신가요?</string>
-    <string name="login_bottom">비회원 주문 조회하기</string>
+    <!--join membership Activity-->
+    <string name="membership_top">지금 가입하면 최대 10만원\n쿠폰증정!</string>
+    <string name="membership_kakao">카카오톡으로 계속하기</string>
+    <string name="membership_email">이메일로 로그인</string>
+    <string name="membership_join_to_email">이메일로 가입</string>
+    <string name="membership_problem">로그인에 문제가 있으신가요?</string>
+    <string name="membership_bottom">비회원 주문 조회하기</string>
 
     <!--join Activity-->
     <string name="join_title">이메일로 회원가입</string>
@@ -35,6 +35,12 @@
     <string name="join_final">회원가입 완료</string>
     <string name="join_essential_notion">필수 사항을 확인해주세요.</string>
 
+    <!--login activity-->
+    <string name="login_title">이메일 로그인</string>
+    <string name="login_email">이메일</string>
+    <string name="login_password">비밀번호</string>
+    <string name="login_btn">로그인하기</string>
+    <string name="login_change_password">비밀번호 재설정</string>
 
     <!--home fragment-->
     <string name="shopping">쇼핑하기</string>
