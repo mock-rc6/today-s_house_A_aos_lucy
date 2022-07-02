@@ -92,7 +92,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::i
     override fun onPostLoginSuccess(response: LoginResponse) {
         dismissLoadingDialog()
 
-        // 아이디 비밀번호 확인이 완료 될 때 만
+        // 아이디 비밀번호 확인이 완료 될 때 만 화면 전환
         if(response.code == 1000) {
             // 생성된 jwt sp에 저장
             val jwt = response.result.jwt

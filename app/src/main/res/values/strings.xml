@@ -45,5 +45,7 @@
     <!--home fragment-->
     <string name="shopping">쇼핑하기</string>
     <string name="rv_title">싱글을 위한 집들이</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

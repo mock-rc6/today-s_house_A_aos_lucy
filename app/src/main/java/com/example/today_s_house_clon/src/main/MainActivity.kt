@@ -18,10 +18,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
         // 기존에 등록 된 menu tint 초기화
         binding.mainBottomNav.itemIconTintList = null
 
-
-        //supportFragmentManager.beginTransaction().replace(R.id.fl_container,HomeFragment()).commitAllowingStateLoss()
-
-
         binding.mainBottomNav.run {
             setOnItemSelectedListener { item ->
                 when(item.itemId) {

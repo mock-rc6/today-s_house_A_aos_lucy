@@ -1,6 +1,7 @@
 package com.example.today_s_house_clon.src.main.login.join
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -10,8 +11,10 @@ import android.widget.CompoundButton
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.example.today_s_house_clon.R
+import com.example.today_s_house_clon.config.ApplicationClass
 import com.example.today_s_house_clon.config.BaseActivity
 import com.example.today_s_house_clon.databinding.ActivityJoinBinding
+import com.example.today_s_house_clon.src.main.MainActivity
 import com.example.today_s_house_clon.src.main.login.join.models.PostSignUpRequest
 import com.example.today_s_house_clon.src.main.login.join.models.SignUpResponse
 import java.util.regex.Pattern
@@ -43,6 +46,11 @@ class JoinActivity : BaseActivity<ActivityJoinBinding>(ActivityJoinBinding::infl
         binding.joinCheck3.setOnClickListener { onCheckChange(binding.joinCheck3) }
         binding.joinCheck4.setOnClickListener { onCheckChange(binding.joinCheck4) }
         binding.joinCheck5.setOnClickListener { onCheckChange(binding.joinCheck5) }
+
+        // 뒤로가기 버튼
+        binding.btnJoinBackArrow.setOnClickListener {
+            finish()
+        }
 
 
         joinEmail.addTextChangedListener(object : TextWatcher{
@@ -297,12 +305,23 @@ class JoinActivity : BaseActivity<ActivityJoinBinding>(ActivityJoinBinding::infl
 
     override fun onPostSignUpSuccess(response: SignUpResponse) {
         dismissLoadingDialog()
-        // intent
-        // sp
-//        val id = response.result.userId
-//        val jwt = response.result.jwt
-        // 회원가입 Activity 종료 후 메인화면으로 이동
-        finish()
+        // 아이디 비밀번호 확인이 완료 될 때 만 화면 전환
+        if(response.code == 1000) {
+            // 생성된 jwt sp에 저장
+            val jwt = response.result.jwt
+            val editor = ApplicationClass.sSharedPreferences.edit()
+            editor.putString("jwt", "$jwt")
+            // 어플 재실행시 로그인 여부 저장
+            editor.putBoolean("login", true)
+            editor.apply()
+            // 액티비티 하나만 실행되고 나머지는 다 삭제
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
+        } else {
+            showCustomToast(response.message.toString())
+        }
     }
 
     override fun onPostSignUpFailure(message: String) {
