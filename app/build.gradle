@@ -1,15 +1,24 @@
 plugins {
     id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
 }
 
 android {
-    compileSdk 32
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+
+    viewBinding {
+        enabled = true
+    }
+
+    dataBinding{
+        enabled = true
+    }
 
     defaultConfig {
         applicationId "com.example.today_s_house_clon"
-        minSdk 21
-        targetSdk 32
+        minSdkVersion 27
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
 
@@ -30,14 +39,11 @@ android {
         jvmTarget = '1.8'
     }
 
-    buildFeatures {
-        viewBinding true
-    }
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -67,8 +73,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     // 써클 이미지 뷰
-    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     // 플로팅 버튼
-    implementation 'com.google.android.material:material:1.1.0-beta01'
+    implementation 'com.google.android.material:material:1.7.0-alpha02'
+
 }

@@ -110,10 +110,9 @@
         android:layout_height="50dp"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:background="@drawable/custom_radius_corner_btn"
-        android:backgroundTint="@color/space_color"
+        android:background="@drawable/custom_radius_corner_btn_color_gray"
         android:text="더보기"
-        android:textColor="@color/blackForText"
+        android:textColor="#343334"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -122,7 +121,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="40dp"
         android:visibility="gone"/>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

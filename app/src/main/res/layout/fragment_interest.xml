@@ -55,23 +55,6 @@
             tools:itemCount="3"
             tools:listitem="@layout/item_home_interest_viewer" />
 
-<!--        <androidx.appcompat.widget.AppCompatButton-->
-<!--            android:id="@+id/btn_home_interest_more"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_marginStart="@dimen/activity_horizontal_margin"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:layout_marginEnd="@dimen/activity_horizontal_margin"-->
-<!--            android:background="@drawable/radius_corner_btn"-->
-<!--            android:backgroundTint="@color/space_color"-->
-<!--            android:text="더보기"-->
-<!--            android:textColor="@color/blackForText"-->
-<!--            android:textSize="16sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/rv_home_interest_second" />-->
-
         <View
             android:id="@+id/home_interest_space_2"
             android:layout_width="match_parent"
@@ -218,58 +201,18 @@
             app:layout_constraintTop_toBottomOf="@+id/ll_home_interest_today_deal_contents"
             android:layout_marginTop="30dp"/>
 
-        <include
-            android:id="@+id/include_viewer_1"
-            layout="@layout/item_home_interest_viewer"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_home_interest_fourth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/home_interest_space_4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            />
-
-<!--        <androidx.appcompat.widget.AppCompatButton-->
-<!--            android:id="@+id/btn_home_interest_more_2"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_marginStart="@dimen/activity_horizontal_margin"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:layout_marginEnd="@dimen/activity_horizontal_margin"-->
-<!--            android:background="@drawable/radius_corner_btn"-->
-<!--            android:backgroundTint="@color/space_color"-->
-<!--            android:text="더보기"-->
-<!--            android:textColor="@color/blackForText"-->
-<!--            android:textSize="16sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/include_viewer_1" />-->
-
-        <include
-            android:id="@+id/include_viewer_2"
-            layout="@layout/item_home_interest_viewer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/include_viewer_1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-<!--        <androidx.appcompat.widget.AppCompatButton-->
-<!--            android:id="@+id/btn_home_interest_more_3"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_marginStart="@dimen/activity_horizontal_margin"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:layout_marginEnd="@dimen/activity_horizontal_margin"-->
-<!--            android:background="@drawable/radius_corner_btn"-->
-<!--            android:backgroundTint="@color/space_color"-->
-<!--            android:text="더보기"-->
-<!--            android:textColor="@color/blackForText"-->
-<!--            android:textSize="16sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/include_viewer_1" />-->
+            tools:itemCount="1"
+            tools:listitem="@layout/item_home_interest_viewer" />
 
         <View
             android:id="@+id/home_interest_space_5"
@@ -278,7 +221,7 @@
             android:background="@color/space_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/include_viewer_2"/>
+            app:layout_constraintTop_toBottomOf="@+id/rv_home_interest_fourth"/>
 
         <include
             android:id="@+id/include_viewer_video"
@@ -367,15 +310,14 @@
             android:layout_height="50dp"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:background="@drawable/custom_radius_corner_btn"
-            android:backgroundTint="@color/space_color"
-            android:text="인테리어 시공업체 더 찾기"
-            android:textColor="@color/blackForText"
+            android:background="@drawable/custom_radius_corner_btn_color_gray"
+            android:text="@string/interest"
+            android:textColor="#343334"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rv_home_interest_review" />
+            app:layout_constraintTop_toBottomOf="@id/rv_home_interest_review"/>
 
         <View
             android:id="@+id/home_interest_space_8"
