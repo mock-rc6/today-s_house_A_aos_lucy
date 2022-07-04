@@ -1,6 +1,6 @@
 ## today-s_house_A_aos_lucy
 
-###daily todo
+### daily todo
 
 - 6/26
   - GitHub 연결
