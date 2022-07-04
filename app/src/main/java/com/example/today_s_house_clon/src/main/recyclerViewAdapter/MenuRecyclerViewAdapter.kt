@@ -6,12 +6,12 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.today_s_house_clon.databinding.ItemHomeInterestTopBtnBinding
+import com.example.today_s_house_clon.databinding.ItemInsideMenuBinding
 import com.example.today_s_house_clon.src.main.recyclerViewAdapter.MenuRecyclerViewAdapter.MenuViewHolder
 
-class MenuRecyclerViewAdapter(private val menuList: ArrayList<GridMenuVo>): RecyclerView.Adapter<MenuViewHolder>() {
+class MenuRecyclerViewAdapter(private val menuList: ArrayList<GridMenuVO>): RecyclerView.Adapter<MenuViewHolder>() {
 
-    private lateinit var binding: ItemHomeInterestTopBtnBinding
+    private lateinit var binding: ItemInsideMenuBinding
 
     inner class MenuViewHolder(menu: View):RecyclerView.ViewHolder(menu){
         val menuImg: ImageView = binding.imgBtn
@@ -19,7 +19,7 @@ class MenuRecyclerViewAdapter(private val menuList: ArrayList<GridMenuVo>): Recy
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
-        binding = ItemHomeInterestTopBtnBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        binding = ItemInsideMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MenuViewHolder(binding.root)
     }
 

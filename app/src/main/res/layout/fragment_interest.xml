@@ -35,7 +35,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vp_home_interest_advertisement"
-            tools:listitem="@layout/item_home_interest_top_btn" />
+            tools:listitem="@layout/item_inside_menu" />
 
         <View
             android:id="@+id/home_interest_space_1"
