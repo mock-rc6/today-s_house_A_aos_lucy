@@ -19,6 +19,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_apple_logo.xml" value="0.107" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_arrow_drop_down.xml" value="0.1485" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_circle_add.xml" value="0.1485" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_clip.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_facebook_logo.xml" value="0.154" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_home_selector.xml" value="0.142" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_home_service_selector.xml" value="0.201" />
@@ -26,6 +27,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_mypage_selector.xml" value="0.201" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_notion_ballon.xml" value="0.1485" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_ranking.xml" value="0.143" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_score_star.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_search_custom.xml" value="0.201" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/ic_store_selector.xml" value="0.201" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/img_kakao_logo.xml" value="0.107" />
@@ -51,7 +53,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/fragment_question_n_answer.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/fragment_store.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/fragment_store_another.xml" value="0.2390625" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/fragment_store_home.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/fragment_store_home.xml" value="0.19639934533551553" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/include_viewer_title.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/item_advertisement_banner.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/item_home_interest_horizontal.xml" value="0.25364583333333335" />
@@ -60,6 +62,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/item_home_interest_top_btn.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/item_home_interest_viewer.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/item_store_category.xml" value="0.4" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/item_todays_deal.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/menu/nav_menu.xml" value="0.1" />
       </map>
     </option>

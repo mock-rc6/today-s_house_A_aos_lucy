@@ -26,7 +26,7 @@ class MenuRecyclerViewAdapter(private val menuList: ArrayList<GridMenuVO>): Recy
     override fun onBindViewHolder(holder: MenuViewHolder, position: Int) {
         val menu = menuList[position]
         holder.menuImg.setImageResource(menu.image)
-        holder.menuTitle.setText(menu.title)
+        holder.menuTitle.text = menu.title
     }
 
     override fun getItemCount(): Int = menuList.size

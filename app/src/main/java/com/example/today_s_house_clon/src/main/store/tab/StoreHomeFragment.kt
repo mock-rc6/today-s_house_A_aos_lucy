@@ -7,16 +7,15 @@ import android.os.Message
 import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.today_s_house_clon.R
 import com.example.today_s_house_clon.config.ApplicationClass
 import com.example.today_s_house_clon.config.BaseFragment
 import com.example.today_s_house_clon.databinding.FragmentStoreHomeBinding
+import com.example.today_s_house_clon.databinding.ItemTodaysDealBinding
 import com.example.today_s_house_clon.src.main.advertisement.AdvertisementAdapter
-import com.example.today_s_house_clon.src.main.recyclerViewAdapter.CategoryRecyclerViewAdapter
-import com.example.today_s_house_clon.src.main.recyclerViewAdapter.CategoryVO
-import com.example.today_s_house_clon.src.main.recyclerViewAdapter.GridMenuVO
-import com.example.today_s_house_clon.src.main.recyclerViewAdapter.MenuRecyclerViewAdapter
+import com.example.today_s_house_clon.src.main.recyclerViewAdapter.*
 import com.example.today_s_house_clon.src.main.store.StoreFragmentInterface
 import com.example.today_s_house_clon.src.main.store.StoreService
 import com.example.today_s_house_clon.src.main.store.models.StoreResponse
@@ -27,6 +26,7 @@ class StoreHomeFragment : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHo
     private var bannerPosition = Int.MAX_VALUE/2
     private var bannerHandler = BannerHandler()
     private lateinit var bannerAdapter : AdvertisementAdapter
+    private lateinit var dealAdapter : TodaysDealRecyclerAdapter
     private var menuList = ArrayList<GridMenuVO>()
     private var categoryList = ArrayList<CategoryVO>()
 
@@ -78,6 +78,10 @@ class StoreHomeFragment : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHo
         binding.rvStoreHomeCategory.adapter = CategoryRecyclerViewAdapter(categoryList)
         binding.rvStoreHomeCategory.layoutManager = GridLayoutManager(requireContext(),4)
 
+        // 오늘의 딜
+        dealAdapter = TodaysDealRecyclerAdapter()
+        binding.rvStoreHomeTodayDeal.adapter = dealAdapter
+        binding.rvStoreHomeTodayDeal.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
     }
 
@@ -164,6 +168,8 @@ class StoreHomeFragment : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHo
 
             val images = response.result.eventImgs.toMutableList()
             bannerAdapter.addImg(images)
+            val deal = response.result.todaysDealList.toMutableList()
+            dealAdapter.addImg(deal)
 
         }
     }

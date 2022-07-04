@@ -31,6 +31,24 @@
   - 템플릿 적용
   - sign up api 연결 
 - 7/2
-  - 
+  - sign up input 타입 정규식 검사
 - 7/3
-  - 
+  - login api 연결
+  - login Activity UI 완료
+  - JoinActivity UI 변경
+  - store home tab 연결 완료
+  - Appcompat Button databinding error
+- 7/4
+  - Appcompat Button databinding error
+    - Appcompat Button의 text color 헥스컬러로 변경 하여 해결
+  - store api 전 adapter 내 list size = 0
+    - adapter 내부에 리스트 추가
+    - adapter 내부에 리스트추가 함수 생성
+- 7/5
+  - store Fragment UI수정
+  - store category UI
+  - todo
+    - store 스토어홈탭 UI 완료
+    - home 인기탭 UI 완료
+    - store 스토어홈탭 api 완료
+    - mypage fragment UI 완료
