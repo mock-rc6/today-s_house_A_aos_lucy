@@ -14,6 +14,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
 
     private lateinit var viewPager: ViewPager2
     private lateinit var tabLayout: TabLayout
+    private lateinit var pagerAdapter: HomePagerAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -25,9 +26,21 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val pagerAdapter = HomePagerAdapter(requireActivity())
+        pagerAdapter = HomePagerAdapter(requireActivity())
 
-        // fragment 추가
+        // tab 프래그먼트 추가
+        addFragment()
+
+        // adapter 연결
+        viewPager.adapter = pagerAdapter
+        viewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            tab.text = pagerAdapter.tabList[position]
+        }.attach()
+    }
+
+    private fun addFragment(){
         pagerAdapter.addFragment(InterestFragment(), "인기")
         pagerAdapter.addFragment(FollowingFragment(), "팔로잉")
         pagerAdapter.addFragment(PhotoFragment(), "사진")
@@ -35,15 +48,5 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
         pagerAdapter.addFragment(KnowHowFragment(), "노하우")
         pagerAdapter.addFragment(ExpertHousewarmingFragment(),"전문가집들이")
         pagerAdapter.addFragment(QuestionNAnswerFragment(), "질문과답변")
-
-        // adapter 연결
-        viewPager.adapter = pagerAdapter
-        viewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-
-
-
-        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            tab.text = pagerAdapter.tabList[position]
-        }.attach()
     }
 }

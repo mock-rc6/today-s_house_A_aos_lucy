@@ -5,15 +5,20 @@ import android.os.Handler
 import android.os.Looper
 import android.os.Message
 import android.provider.MediaStore
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.today_s_house_clon.R
 import com.example.today_s_house_clon.config.ApplicationClass
 import com.example.today_s_house_clon.config.BaseFragment
 import com.example.today_s_house_clon.databinding.FragmentStoreHomeBinding
 import com.example.today_s_house_clon.src.main.advertisement.AdvertisementAdapter
+import com.example.today_s_house_clon.src.main.recyclerViewAdapter.GridMenuVo
+import com.example.today_s_house_clon.src.main.recyclerViewAdapter.MenuRecyclerViewAdapter
 import com.example.today_s_house_clon.src.main.store.StoreFragmentInterface
 import com.example.today_s_house_clon.src.main.store.StoreService
 import com.example.today_s_house_clon.src.main.store.models.EventImg
@@ -25,6 +30,7 @@ class StoreHomeFragment : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHo
     private var bannerPosition = Int.MAX_VALUE/2
     private var bannerHandler = BannerHandler()
     private lateinit var bannerAdapter : AdvertisementAdapter
+    private var menuList = ArrayList<GridMenuVo>()
 
     // 2초 후 광고 전환
     private val intervalTime = 2000.toLong()
@@ -41,8 +47,6 @@ class StoreHomeFragment : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHo
             StoreService(this, jwt).tryGetStore()
         }
 
-        // 임의 광고 이미지
-//        bannerList.add(R.drawable.img_ad_1)
 
         // 광고어댑터
         bannerAdapter = AdvertisementAdapter()
@@ -54,7 +58,7 @@ class StoreHomeFragment : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHo
             registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
                 override fun onPageScrollStateChanged(state: Int) {
                     super.onPageScrollStateChanged(state)
-                    when(state) {
+                    when (state) {
                         // 뷰페이저가 움직이는 중일 때 자동 스크롤 시작
                         ViewPager2.SCROLL_STATE_DRAGGING -> autoScrollStop()
                         // 자동 스크롤 멈춤
@@ -64,7 +68,28 @@ class StoreHomeFragment : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHo
             })
         }
 
+        // 상단 메뉴 리스트 추가
+        addMenuList()
+        // 상단 메뉴 어댑터 연결
+        binding.rvStoreHomeFirst.adapter = MenuRecyclerViewAdapter(menuList)
+        binding.rvStoreHomeFirst.layoutManager = GridLayoutManager(requireContext(),5)
 
+
+    }
+
+    // 메뉴 리스트
+    private fun addMenuList() {
+
+        menuList.add(GridMenuVo(R.drawable.ic_store_1, "오세일"))
+        menuList.add(GridMenuVo(R.drawable.ic_store_2, "트렌드발견"))
+        menuList.add(GridMenuVo(R.drawable.ic_store_3, "리퍼마켓"))
+        menuList.add(GridMenuVo(R.drawable.ic_store_4, "프리미엄"))
+        menuList.add(GridMenuVo(R.drawable.ic_store_5, "생필품핫딜"))
+        menuList.add(GridMenuVo(R.drawable.ic_store_6, "반려동물"))
+        menuList.add(GridMenuVo(R.drawable.ic_store_7, "오!굿즈"))
+        menuList.add(GridMenuVo(R.drawable.ic_store_8, "유아동"))
+        menuList.add(GridMenuVo(R.drawable.ic_store_9, "캠핑용품"))
+        menuList.add(GridMenuVo(R.drawable.ic_store_10, "LG쇼룸"))
 
     }
 
@@ -119,6 +144,7 @@ class StoreHomeFragment : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHo
     override fun onGetStoreFailure(message: String) {
         dismissLoadingDialog()
         showCustomToast("실패")
+        Log.d("TAG", "에러내용 : $message")
     }
 
 }

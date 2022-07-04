@@ -1,7 +1,6 @@
 package com.example.today_s_house_clon.src.main.store.models
 
 import com.example.today_s_house_clon.config.BaseResponse
-import com.example.today_s_house_clon.src.main.login.models.ResultLogin
 import com.google.gson.annotations.SerializedName
 
 class StoreResponse (

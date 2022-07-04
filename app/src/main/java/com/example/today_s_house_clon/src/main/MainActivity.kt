@@ -32,7 +32,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
                         binding.abSpace.visibility = View.GONE
                         binding.btnSetting.visibility = View.GONE
                         binding.btnShare.visibility = View.GONE
-                        binding.etInput.setHint("오늘의 집 통합검색")
+                        binding.etInput.hint = "오늘의 집 통합검색"
                     }
                     R.id.store -> {
                         supportFragmentManager.beginTransaction()
@@ -44,7 +44,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
                         binding.abSpace.visibility = View.GONE
                         binding.btnSetting.visibility = View.GONE
                         binding.btnShare.visibility = View.GONE
-                        binding.etInput.setHint("스토어 검색")
+                        binding.etInput.hint = "스토어 검색"
                     }
                     R.id.home_service -> {
                         supportFragmentManager.beginTransaction()
@@ -56,7 +56,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
                         binding.abSpace.visibility = View.GONE
                         binding.btnSetting.visibility = View.GONE
                         binding.btnShare.visibility = View.GONE
-                        binding.etInput.setHint("홈서비스 검색")
+                        binding.etInput.hint = "홈서비스 검색"
                     }
                     R.id.mypage -> {
                         supportFragmentManager.beginTransaction()
