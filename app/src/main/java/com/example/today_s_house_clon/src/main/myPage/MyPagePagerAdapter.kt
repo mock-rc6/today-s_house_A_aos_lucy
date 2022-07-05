@@ -1,10 +1,11 @@
-package com.example.today_s_house_clon.src.main.home
+package com.example.today_s_house_clon.src.main.myPage
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class HomePagerAdapter(fragmentActivity: FragmentActivity): FragmentStateAdapter(fragmentActivity){
+class MyPagePagerAdapter(fragmentActivity: FragmentActivity): FragmentStateAdapter(fragmentActivity) {
+
     var fragments : ArrayList<Fragment> = ArrayList()
     var tabList : ArrayList<String> = ArrayList()
 
@@ -17,5 +18,4 @@ class HomePagerAdapter(fragmentActivity: FragmentActivity): FragmentStateAdapter
         tabList.add(tab)
         notifyItemInserted(fragments.size - 1)
     }
-
 }
