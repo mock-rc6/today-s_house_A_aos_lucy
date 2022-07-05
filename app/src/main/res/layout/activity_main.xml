@@ -138,6 +138,7 @@
             app:itemRippleColor="#00FFFFFF"
             app:itemIconSize="28dp"
             android:background="#00FFFFFF"
+            app:itemBackground="@color/white"
             app:itemTextColor="@color/bottom_nav_selector_color"
             android:layout_weight="1"/>
 

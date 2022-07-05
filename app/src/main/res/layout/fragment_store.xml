@@ -19,7 +19,7 @@
         app:tabSelectedTextColor="@color/main_color"
         app:tabRippleColor="#00000000"
         app:tabTextAppearance="@style/tabTextAppearance"
-        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorFullWidth="true"
         app:tabGravity="fill"
         app:tabMinWidth="3dp"
         android:background="@color/white"/>
