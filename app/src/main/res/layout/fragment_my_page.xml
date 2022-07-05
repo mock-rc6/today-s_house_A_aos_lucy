@@ -22,7 +22,8 @@
         app:tabIndicatorFullWidth="true"
         app:tabGravity="fill"
         app:tabMaxWidth="0dp"
-        android:background="@color/white"/>
+        android:background="@color/white"
+        android:elevation="15dp"/>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/my_page_view_pager"

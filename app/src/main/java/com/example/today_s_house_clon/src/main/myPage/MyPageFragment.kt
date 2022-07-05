@@ -1,19 +1,13 @@
 package com.example.today_s_house_clon.src.main.myPage
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
 import com.example.today_s_house_clon.R
 import com.example.today_s_house_clon.config.BaseFragment
-import com.example.today_s_house_clon.databinding.FragmentHomeBinding
 import com.example.today_s_house_clon.databinding.FragmentMyPageBinding
-import com.example.today_s_house_clon.databinding.FragmentStoreHomeBinding
-import com.example.today_s_house_clon.src.main.home.HomePagerAdapter
 import com.example.today_s_house_clon.src.main.myPage.tab.MyShoppingFragment
-import com.example.today_s_house_clon.src.main.myPage.tab.ProfilFragment
+import com.example.today_s_house_clon.src.main.myPage.tab.ProfileFragment
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -48,7 +42,8 @@ class MyPageFragment : BaseFragment<FragmentMyPageBinding>(FragmentMyPageBinding
     }
 
     private fun addFragment(){
-        pagerAdapter.addFragment(MyShoppingFragment(),"프로필")
-        pagerAdapter.addFragment(ProfilFragment(),"나의쇼핑")
+        pagerAdapter.addFragment(ProfileFragment(),"프로필")
+        pagerAdapter.addFragment(MyShoppingFragment(),"나의쇼핑")
+
     }
 }
