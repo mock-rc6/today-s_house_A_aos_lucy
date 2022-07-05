@@ -1,6 +1,7 @@
 package com.example.today_s_house_clon.src.main.advertisement
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -8,7 +9,7 @@ import com.bumptech.glide.Glide
 import com.example.today_s_house_clon.databinding.ItemHomeAdvertisementBannerBinding
 import com.example.today_s_house_clon.src.main.home.models.EventInfo
 
-class HomeAdvertisementAdapter(): RecyclerView.Adapter<HomeAdvertisementAdapter.CustomViewHolder>() {
+class HomeAdvertisementAdapter(): RecyclerView.Adapter<HomeAdvertisementAdapter.CustomViewHolder>(){
 
     private lateinit var binding: ItemHomeAdvertisementBannerBinding
     private var imageList = mutableListOf<EventInfo>()

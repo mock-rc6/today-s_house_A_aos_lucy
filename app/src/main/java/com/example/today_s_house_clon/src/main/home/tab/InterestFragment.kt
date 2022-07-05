@@ -7,6 +7,7 @@ import android.os.Message
 import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.today_s_house_clon.R
 import com.example.today_s_house_clon.config.ApplicationClass
@@ -63,6 +64,7 @@ class InterestFragment : BaseFragment<FragmentInterestBinding>(FragmentInterestB
                 }
             })
         }
+
 
         // 메뉴 리스트 추가
         addMenuList()

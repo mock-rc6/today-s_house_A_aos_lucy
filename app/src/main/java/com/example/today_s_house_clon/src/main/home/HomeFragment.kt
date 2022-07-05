@@ -21,6 +21,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
 
         viewPager = binding.homeViewPager
         tabLayout = binding.homeTabLayout
+
+
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
