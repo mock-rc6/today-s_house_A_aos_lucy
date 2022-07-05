@@ -328,7 +328,509 @@
             app:layout_constraintTop_toBottomOf="@+id/btn_home_interest_more_1"
             android:layout_marginTop="30dp"/>
 
+        <TextView
+            android:id="@+id/tv_home_interest_title_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오늘의 기획전"
+            android:textSize="@dimen/title_text"
+            android:textColor="@color/text_color_black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            app:layout_constraintTop_toBottomOf="@id/home_interest_space_8"
+            android:layout_marginTop="@dimen/between_title_dimen"/>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_home_interest_exhibition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_interest_title_3"
+            android:layout_marginTop="20dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_home_interest_more_2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:background="@drawable/custom_radius_corner_btn_color_gray"
+            android:text="기획전 더보기"
+            android:textColor="@color/text_color_black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_home_interest_exhibition"/>
+
+        <View
+            android:id="@+id/home_interest_space_9"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_10"
+            android:background="@color/space_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_home_interest_more_2"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/tv_home_interest_best_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="베스트"
+            android:textColor="@color/text_color_black"
+            android:textStyle="bold"
+            android:textSize="@dimen/title_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_interest_space_9"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"/>
+
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_arrow"
+            app:layout_constraintTop_toTopOf="@+id/tv_home_interest_best_title"
+            app:layout_constraintBottom_toBottomOf="@id/tv_home_interest_best_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_home_interest_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_interest_best_title"
+            android:layout_marginTop="20dp"
+            app:tabMode="scrollable"
+            app:tabIndicatorColor="@color/main_color"
+            app:tabTextColor="@color/black"
+            app:tabSelectedTextColor="@color/main_color"
+            app:tabRippleColor="#00000000"
+            app:tabTextAppearance="@style/tabTextAppearance"
+            app:tabIndicatorFullWidth="false"
+            app:tabGravity="fill"
+            app:tabMinWidth="3dp"/>
+
+        <!--        뷰페이저-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_home_interest_more_3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:background="@drawable/custom_radius_corner_btn_color_gray"
+            android:text="베스트셀러 더보기"
+            android:textColor="@color/text_color_black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tl_home_interest_bottom"
+            android:layout_marginTop="20dp"/>
+
+        <View
+            android:id="@+id/home_interest_bottom_divider_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/space_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_home_interest_more_3"
+            android:layout_marginTop="30dp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_home_interest_bottom_info_1"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_interest_bottom_divider_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:src="@drawable/img_naver_logo"
+                    android:layout_marginTop="30dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="친구초대"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_color_black"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_black"
+                    android:text="5000포인트\n선물까지!"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/space_color"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:src="@drawable/img_naver_logo"
+                    android:layout_marginTop="30dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오늘의집 스토리"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_color_black"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_black"
+                    android:text="오늘의집이\n궁금해요."
+                    android:textSize="13sp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/space_color"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/img_naver_logo"
+                    android:layout_marginTop="30dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고객센터"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_color_black"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_black"
+                    android:text="평일 09:00 ~ 18:00\n(주말 &amp; 공휴일 제외)"
+                    android:textSize="10sp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/home_interest_bottom_divider_2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/space_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_home_interest_bottom_info_1"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_home_interest_bottom_info_2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_interest_bottom_divider_2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="전문가 회원가입"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_color_black"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center|bottom"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="인테리어 전문가님들!\n오늘의 집과 함께하세요."
+                    android:textSize="10sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/text_color_dark_gray"
+                    android:textAlignment="center"
+                    android:gravity="top"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    tools:ignore="RtlCompat" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/space_color"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="사업자 구매 회원 전환"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_color_black"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center|bottom"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="사업자 구매 회원에게\n혜택을 드립니다."
+                    android:textSize="10sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/text_color_dark_gray"
+                    android:textAlignment="center"
+                    android:gravity="top"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    tools:ignore="RtlCompat" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/home_interest_bottom_divider_3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/space_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_home_interest_bottom_info_2"
+            />
+
+        <TextView
+            android:id="@+id/tv_home_interest_bottom_info_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(주)버킷플레이스"
+            android:textSize="13sp"
+            android:textColor="@color/text_color_black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            app:layout_constraintTop_toBottomOf="@+id/home_interest_bottom_divider_3"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/tv_home_interest_bottom_info_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="대표이사 우승재"
+            android:textColor="@color/text_color_dark_gray"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_home_interest_bottom_info_1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_interest_bottom_info_1"
+            android:layout_marginTop="10dp"/>
+
+        <View
+            android:id="@+id/home_interest_space_bottom_1"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/space_color"
+            app:layout_constraintStart_toEndOf="@+id/tv_home_interest_bottom_info_2"
+            app:layout_constraintTop_toTopOf="@+id/tv_home_interest_bottom_info_2"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_home_interest_bottom_info_2"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/tv_home_interest_bottom_info_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사업자등록번호 119-86-91245"
+            android:textColor="@color/text_color_dark_gray"
+            android:textSize="11sp"
+            app:layout_constraintStart_toEndOf="@+id/home_interest_space_bottom_1"
+            app:layout_constraintTop_toTopOf="@+id/tv_home_interest_bottom_info_2"
+            android:layout_marginStart="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_home_interest_bottom_info_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="통신판매업신고번호 제2018-서울서초-0580호"
+            android:textColor="@color/text_color_dark_gray"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_home_interest_bottom_info_2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_interest_bottom_info_2"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_home_interest_bottom_info_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사업자정보확인"
+            android:textColor="@color/text_color_dark_gray"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tv_home_interest_bottom_info_4"
+            app:layout_constraintTop_toTopOf="@+id/tv_home_interest_bottom_info_4"
+            android:layout_marginStart="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_home_interest_bottom_info_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="서울 서초구 서초대로74길 4 삼성생명서초타워 27층"
+            android:textColor="@color/text_color_dark_gray"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_home_interest_bottom_info_4"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_interest_bottom_info_4"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_home_interest_bottom_info_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="contact@bucketplace.net"
+            android:textColor="@color/text_color_dark_gray"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_home_interest_bottom_info_6"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_interest_bottom_info_6"
+            android:layout_marginTop="5dp"/>
+
+        <View
+            android:id="@+id/home_interest_space_bottom_2"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/space_color"
+            app:layout_constraintStart_toEndOf="@+id/tv_home_interest_bottom_info_7"
+            app:layout_constraintTop_toTopOf="@+id/tv_home_interest_bottom_info_7"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_home_interest_bottom_info_7"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/tv_home_interest_bottom_info_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1670-0876"
+            android:textColor="@color/text_color_dark_gray"
+            android:textSize="11sp"
+            app:layout_constraintStart_toEndOf="@+id/home_interest_space_bottom_2"
+            app:layout_constraintTop_toTopOf="@+id/tv_home_interest_bottom_info_7"
+            android:layout_marginStart="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_home_interest_bottom_info_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(주)버킷플레이스는 통신판매중개자로 거래당사자가 아니므로, 판매자가 등록한\n상품정보 및 거래 등에 대해 책임을 지지 않습니다. 단, ㈜버킷플레이스가 판매자로\n등록판매한 상품은 판매자로서 책임을 부담합니다."
+            android:textColor="@color/text_color_dark_gray"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_home_interest_bottom_info_7"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_interest_bottom_info_7"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_home_interest_bottom_info_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이용약관"
+            android:textColor="@color/text_color_dark_gray"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_home_interest_bottom_info_9"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_interest_bottom_info_9"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_home_interest_bottom_info_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="개인정보처리방침"
+            android:textColor="@color/text_color_dark_gray"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tv_home_interest_bottom_info_10"
+            app:layout_constraintTop_toTopOf="@+id/tv_home_interest_bottom_info_10"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="20dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
