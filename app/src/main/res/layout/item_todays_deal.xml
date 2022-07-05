@@ -123,13 +123,13 @@
 
     <TextView
         android:id="@+id/tv_free_delivery"
-        android:layout_width="65dp"
+        android:layout_width="60dp"
         android:layout_height="20dp"
         android:background="@drawable/custom_radius_corner_img"
         android:text="무료배송"
         android:textColor="@color/text_color_dark_gray"
         android:textStyle="bold"
-        android:textSize="@dimen/text_size_13"
+        android:textSize="11sp"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="@id/iv_img"
         app:layout_constraintTop_toBottomOf="@id/iv_star"
@@ -137,14 +137,14 @@
 
     <TextView
         android:id="@+id/tv_hot_sale"
-        android:layout_width="40dp"
+        android:layout_width="35dp"
         android:layout_height="20dp"
         android:background="@drawable/custom_radius_corner_img"
         android:backgroundTint="#FF7777"
         android:text="특가"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textSize="@dimen/text_size_13"
+        android:textSize="11sp"
         android:gravity="center"
         app:layout_constraintStart_toEndOf="@id/tv_free_delivery"
         app:layout_constraintTop_toTopOf="@id/tv_free_delivery"

@@ -112,7 +112,14 @@
             android:orientation="horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
-
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:background="@color/space_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_store_home_today_deal"
+            android:layout_marginTop="50dp"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

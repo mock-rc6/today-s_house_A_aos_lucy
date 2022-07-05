@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".src.main.home.tab.PhotoFragment">
+    tools:context=".src.main.home.tab.HomeAnotherFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="사진" />
+        android:text="질문과답변" />
 
 </FrameLayout>

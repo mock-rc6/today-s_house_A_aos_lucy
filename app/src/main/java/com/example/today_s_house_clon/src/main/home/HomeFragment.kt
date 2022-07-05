@@ -42,11 +42,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
 
     private fun addFragment(){
         pagerAdapter.addFragment(InterestFragment(), "인기")
-        pagerAdapter.addFragment(FollowingFragment(), "팔로잉")
-        pagerAdapter.addFragment(PhotoFragment(), "사진")
-        pagerAdapter.addFragment(HousewarmingFragment(), "집들이")
-        pagerAdapter.addFragment(KnowHowFragment(), "노하우")
-        pagerAdapter.addFragment(ExpertHousewarmingFragment(),"전문가집들이")
-        pagerAdapter.addFragment(QuestionNAnswerFragment(), "질문과답변")
+        pagerAdapter.addFragment(HomeAnotherFragment(), "팔로잉")
+        pagerAdapter.addFragment(HomeAnotherFragment(), "사진")
+        pagerAdapter.addFragment(HomeAnotherFragment(), "집들이")
+        pagerAdapter.addFragment(HomeAnotherFragment(), "노하우")
+        pagerAdapter.addFragment(HomeAnotherFragment(),"전문가집들이")
+        pagerAdapter.addFragment(HomeAnotherFragment(), "질문과답변")
     }
 }

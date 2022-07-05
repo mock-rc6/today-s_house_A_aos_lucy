@@ -13,8 +13,7 @@ import com.example.today_s_house_clon.R
 import com.example.today_s_house_clon.config.ApplicationClass
 import com.example.today_s_house_clon.config.BaseFragment
 import com.example.today_s_house_clon.databinding.FragmentStoreHomeBinding
-import com.example.today_s_house_clon.databinding.ItemTodaysDealBinding
-import com.example.today_s_house_clon.src.main.advertisement.AdvertisementAdapter
+import com.example.today_s_house_clon.src.main.advertisement.StoreAdvertisementAdapter
 import com.example.today_s_house_clon.src.main.recyclerViewAdapter.*
 import com.example.today_s_house_clon.src.main.store.StoreFragmentInterface
 import com.example.today_s_house_clon.src.main.store.StoreService
@@ -25,7 +24,7 @@ class StoreHomeFragment : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHo
     // 광고 인덱스값 > 광고 아이템 수의 절반 중간에서 시작하여 앞뒤 이동시 무한대로 보임
     private var bannerPosition = Int.MAX_VALUE/2
     private var bannerHandler = BannerHandler()
-    private lateinit var bannerAdapter : AdvertisementAdapter
+    private lateinit var bannerAdapter : StoreAdvertisementAdapter
     private lateinit var dealAdapter : TodaysDealRecyclerAdapter
     private var menuList = ArrayList<GridMenuVO>()
     private var categoryList = ArrayList<CategoryVO>()
@@ -47,7 +46,7 @@ class StoreHomeFragment : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHo
 
 
         // 광고어댑터
-        bannerAdapter = AdvertisementAdapter()
+        bannerAdapter = StoreAdvertisementAdapter()
         binding.vpStoreHomeAdvertisement.orientation = ViewPager2.ORIENTATION_HORIZONTAL
         binding.vpStoreHomeAdvertisement.adapter = bannerAdapter
         binding.vpStoreHomeAdvertisement.setCurrentItem(bannerPosition, false)
