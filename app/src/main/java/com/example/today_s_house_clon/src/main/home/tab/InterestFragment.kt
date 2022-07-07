@@ -44,6 +44,8 @@ class InterestFragment : BaseFragment<FragmentInterestBinding>(FragmentInterestB
         // api 연동 바로 시작
         val editor = ApplicationClass.sSharedPreferences
         val jwt = editor.getString("jwt", null).toString()
+        val userId = editor.getLong("userId", 0)
+        showCustomToast("$userId")
 
         showLoadingDialog(requireContext())
         HomeService(this).tryGetHome(jwt!!)

@@ -1,6 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_basket_company_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회사명"
+        android:textSize="18sp"
+        android:textColor="@color/text_color_dark_gray"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <View
+        android:id="@+id/divider_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/space_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_basket_company_name"
+        android:layout_marginTop="10dp"/>
+
+    <CheckBox
+        android:id="@+id/check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        app:layout_constraintTop_toBottomOf="@id/divider_1"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/iv_item"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/custom_radius_corner_img"
+        app:layout_constraintStart_toEndOf="@id/check_box"
+        app:layout_constraintTop_toTopOf="@id/check_box"
+        android:layout_marginStart="10dp"
+        android:scaleType="centerInside"/>
+
+    <TextView
+        android:id="@+id/tv_item_name"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:text="상품명"
+        android:textColor="@color/text_color_black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@id/iv_item"
+        app:layout_constraintTop_toTopOf="@id/check_box"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_item_delete"
+        android:layout_marginEnd="10dp"/>
+
+    <ImageButton
+        android:id="@+id/btn_item_delete"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="#00FFFFFF"
+        android:src="@drawable/ic_bold_close"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:layout_constraintTop_toTopOf="@id/check_box"/>
+
+    <TextView
+        android:id="@+id/tv_delivery_pee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="배송비 4,500원 | 일반택배"
+        android:textSize="10sp"
+        android:textColor="@color/text_color_dark_gray"
+        app:layout_constraintStart_toStartOf="@id/tv_item_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_name"
+        android:layout_marginTop="5dp"/>
+
+    <View
+        android:id="@+id/iv_background"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="@id/iv_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:background="@drawable/custom_radius_corner_btn_color_gray"
+        app:layout_constraintTop_toBottomOf="@+id/tv_delivery_pee"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="세부항목"
+        android:textColor="@color/text_color_black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/iv_background"
+        app:layout_constraintTop_toTopOf="@id/iv_background"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <ImageButton
+        android:id="@+id/btn_item_delete_2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="#00FFFFFF"
+        android:src="@drawable/ic_bold_close"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="@id/iv_background"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toTopOf="@id/iv_background"
+        android:layout_marginTop="10dp"/>
+
+    <View
+        android:id="@+id/count_background"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:background="@drawable/custom_radius_corner_gray_color_stroke"
+        app:layout_constraintStart_toStartOf="@id/iv_background"
+        app:layout_constraintBottom_toBottomOf="@id/iv_background"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="15sp"
+        android:textColor="@color/text_color_black"
+        app:layout_constraintStart_toStartOf="@id/count_background"
+        app:layout_constraintEnd_toEndOf="@id/arrow"
+        app:layout_constraintTop_toTopOf="@id/count_background"
+        app:layout_constraintBottom_toBottomOf="@id/count_background"/>
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_arrow_drop_down"
+        app:layout_constraintEnd_toEndOf="@id/count_background"
+        app:layout_constraintTop_toTopOf="@id/count_background"
+        app:layout_constraintBottom_toBottomOf="@id/count_background"
+        android:layout_marginEnd="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6,000원"
+        android:textColor="#676667"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/iv_background"
+        app:layout_constraintBottom_toBottomOf="@id/iv_background"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/change_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="옵션변경"
+        android:textSize="12sp"
+        android:textColor="@color/text_color_dark_gray"
+        app:layout_constraintStart_toStartOf="@id/iv_background"
+        app:layout_constraintTop_toBottomOf="@id/iv_background"
+        android:layout_marginTop="20dp"/>
+
+    <View
+        android:id="@+id/divider_2"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/space_color"
+        app:layout_constraintTop_toTopOf="@id/change_option"
+        app:layout_constraintBottom_toBottomOf="@id/change_option"
+        app:layout_constraintStart_toEndOf="@id/change_option"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color_black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:text="바로구매"
+        app:layout_constraintStart_toEndOf="@id/divider_2"
+        app:layout_constraintTop_toTopOf="@+id/change_option"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6,000원"
+        android:textColor="@color/text_color_black"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/change_option"
+        app:layout_constraintBottom_toBottomOf="@+id/change_option"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin" />
+
+    <View
+        android:id="@+id/divider_3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/space_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_price"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider_3"
+        android:text="배송비 4,500원"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@color/text_color_dark_gray"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"/>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

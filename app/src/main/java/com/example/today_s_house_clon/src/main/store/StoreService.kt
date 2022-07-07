@@ -1,5 +1,6 @@
 package com.example.today_s_house_clon.src.main.store
 
+import android.util.Log
 import com.example.today_s_house_clon.config.ApplicationClass
 import com.example.today_s_house_clon.src.main.store.models.DetailResponse
 import com.example.today_s_house_clon.src.main.store.models.StoreResponse
@@ -26,9 +27,11 @@ class StoreService(val storeInterface: StoreInterface) {
         })
     }
 
-    fun tryGetItemDetail( itemId: String, userId: String){
+    fun tryGetItemDetail( token: String, itemId: Long, userId: Long){
+        Log.d("TAG", "${itemId.javaClass.name}")
+
         val storeRetrofitInterface = ApplicationClass.sRetrofit.create(StoreRetrofitInterface::class.java)
-        storeRetrofitInterface.getItemDetail(itemId, userId).enqueue(object :
+        storeRetrofitInterface.getItemDetail(token, itemId, userId).enqueue(object :
             Callback<DetailResponse> {
             override fun onResponse(
                 call: Call<DetailResponse>, response: Response<DetailResponse>

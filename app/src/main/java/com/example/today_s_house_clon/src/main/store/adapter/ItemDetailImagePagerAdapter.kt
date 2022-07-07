@@ -1,4 +1,4 @@
-package com.example.today_s_house_clon.src.main.advertisement
+package com.example.today_s_house_clon.src.main.store.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -6,47 +6,38 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.today_s_house_clon.databinding.ItemHomeAdvertisementBannerBinding
+import com.example.today_s_house_clon.databinding.ItemDetailImageBinding
 import com.example.today_s_house_clon.src.main.home.models.EventInfo
+import com.example.today_s_house_clon.src.main.store.models.ResultItemDetail
 
-class HomeAdvertisementAdapter(): RecyclerView.Adapter<HomeAdvertisementAdapter.CustomViewHolder>(){
+class ItemDetailImagePagerAdapter(): RecyclerView.Adapter<ItemDetailImagePagerAdapter.CustomViewHolder>(){
 
-    private lateinit var binding: ItemHomeAdvertisementBannerBinding
-    private var imageList = mutableListOf<EventInfo>()
+    private lateinit var binding: ItemDetailImageBinding
+    private var imageList = mutableListOf<String>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
             CustomViewHolder {
-
-        binding = ItemHomeAdvertisementBannerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return CustomViewHolder(binding).apply {
-            // 광고 클릭 리스너
-            itemView.setOnClickListener {
-
-            }
-        }
+        binding = ItemDetailImageBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return CustomViewHolder(binding)
 
     }
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
-        val pageLength = imageList.size
-        if (pageLength != 0) {
-            holder.bind(imageList[position%pageLength])
-        }
+        holder.bind(imageList[position])
     }
 
-    // 뷰페이저 전환이 무한처럼 보이도록 아이템 수 max
-    override fun getItemCount(): Int = Int.MAX_VALUE
+    override fun getItemCount(): Int = imageList.size
 
     @SuppressLint("NotifyDataSetChanged")
-    fun addImg(item: List<EventInfo>) {
+    fun addImg(item: List<String>) {
         imageList.addAll(item)
         notifyDataSetChanged()
     }
 
-    inner class CustomViewHolder(private val binding: ItemHomeAdvertisementBannerBinding): RecyclerView.ViewHolder(binding.root){
-        fun bind(item: EventInfo) {
+    inner class CustomViewHolder(private val binding: ItemDetailImageBinding): RecyclerView.ViewHolder(binding.root){
+        fun bind(item: String) {
 
-            Glide.with(binding.root).load(item.eventImgUrl).into(binding.ivBanner)
+            Glide.with(binding.root).load(item).into(binding.ivImage)
         }
     }
 }

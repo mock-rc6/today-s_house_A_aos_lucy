@@ -15,7 +15,7 @@ interface StoreRetrofitInterface {
     fun getStore(@Header ("X-ACCESS-TOKEN") token: String ): Call<StoreResponse>
 
     @GET("/app/store/items?id=:itemId&user=:userId")
-    fun getItemDetail(@Query ("id") id: String, @Query ("user") user: String ): Call<DetailResponse>
+    fun getItemDetail(@Header ("X-ACCESS-TOKEN") token: String, @Query ("id") id: Long, @Query ("user") user: Long ): Call<DetailResponse>
 
 
 }
