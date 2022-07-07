@@ -1,12 +1,13 @@
-package com.example.today_s_house_clon.src.main.store
+package com.example.today_s_house_clon.src.main.store.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.today_s_house_clon.databinding.ItemTodaysDealBinding
-import com.example.today_s_house_clon.src.main.store.TodaysDealRecyclerAdapter.DealViewHolder
+import com.example.today_s_house_clon.src.main.store.adapter.TodaysDealRecyclerAdapter.DealViewHolder
 import com.example.today_s_house_clon.src.main.store.models.TodayDeal
 import java.text.DecimalFormat
 
@@ -15,6 +16,12 @@ class TodaysDealRecyclerAdapter(): RecyclerView.Adapter<DealViewHolder>() {
     private lateinit var binding: ItemTodaysDealBinding
     private var dealList = mutableListOf<TodayDeal>()
     private val dec = DecimalFormat("#,###")
+
+    private lateinit var listener: OnItemClickListener
+
+    interface OnItemClickListener{
+        fun onItemClick(v: View, data: TodayDeal, position: Int)
+    }
 
     inner class DealViewHolder(private val binding: ItemTodaysDealBinding): RecyclerView.ViewHolder(binding.root) {
         @SuppressLint("SetTextI18n")
@@ -30,8 +37,20 @@ class TodaysDealRecyclerAdapter(): RecyclerView.Adapter<DealViewHolder>() {
             binding.tvPrice.text = dec.format(deal.price.replace("[^0-9]".toRegex(),"").toInt())
             binding.tvScore.text = String.format("%.1f", deal.score)
             binding.tvReview.text = String.format("리뷰 %d", deal.reviewNum)
+
+            val pos = adapterPosition
+            if (pos != RecyclerView.NO_POSITION) {
+                itemView.setOnClickListener {
+                    listener?.onItemClick(itemView, deal, pos)
+                }
+            }
+
         }
 
+    }
+
+    fun setOnItemClickListener(listener: OnItemClickListener) {
+        this.listener = listener
     }
 
     fun addImg(item: MutableList<TodayDeal>) {

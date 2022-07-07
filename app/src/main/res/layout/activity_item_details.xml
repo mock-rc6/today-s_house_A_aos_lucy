@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".src.main.store.ItemDetailsActivity">
+    tools:context=".src.main.store.ItemDetailsActivity"
+    android:background="@color/white">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -48,7 +49,7 @@
 
                     <ImageButton
                         android:id="@+id/btn_home"
-                        android:layout_width="40dp"
+                        android:layout_width="30dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_home_app_bar"
                         android:background="#00FFFFFF"
@@ -82,7 +83,7 @@
                         android:src="@drawable/ic_basket"
                         android:background="#00FFFFFF"
                         android:scaleType="centerInside"
-                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginStart="5dp"
                         android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
 
                 </LinearLayout>
@@ -97,7 +98,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/detail_top_app_bar"
                 android:textSize="13sp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
                 android:layout_marginTop="10dp"/>
 
             <ImageView
@@ -149,7 +150,7 @@
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/vp_detail_item"
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
+                android:layout_height="380dp"
                 app:layout_constraintTop_toBottomOf="@id/top_category_1"
                 android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -158,23 +159,20 @@
             <LinearLayout
                 android:id="@+id/ll_today_deal_due"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/vp_detail_item"
                 android:background="@color/background_highlight"
                 android:orientation="horizontal">
 
-                <Space
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"/>
 
                 <ImageView
                     android:layout_width="18dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_watch"
-                    android:backgroundTint="#FFB9B9"/>
+                    android:backgroundTint="#FFB9B9"
+                    android:layout_marginStart="140dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -229,11 +227,12 @@
                 android:id="@+id/iv_detail_share"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:background="@drawable/ic_share"
+                android:src="@drawable/ic_share"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_detail_company_name"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:background="#00FFFFFF"/>
 
             <TextView
                 android:id="@+id/tv_detail_item_name"
@@ -496,7 +495,8 @@
                 android:text="스타일링샷 전체보기 ＞"
                 android:textColor="@color/main_color"
                 app:layout_constraintTop_toBottomOf="@+id/rv_detail_styling"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:stateListAnimator="@null"/>
 
             <View
                 android:id="@+id/detail_divider_5"
@@ -684,7 +684,8 @@
                 android:text="리뷰 더보기 (1,000 )"
                 android:textStyle="bold"
                 android:textSize="17sp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                android:stateListAnimator="@null"/>
 
             <View
                 android:id="@+id/detail_divider_8"
@@ -846,7 +847,8 @@
             android:text="구매하기"
             android:textColor="@color/white"
             android:textSize="17sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:stateListAnimator="@null"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

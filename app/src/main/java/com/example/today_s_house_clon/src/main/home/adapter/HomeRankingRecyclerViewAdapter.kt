@@ -1,4 +1,4 @@
-package com.example.today_s_house_clon.src.main.home
+package com.example.today_s_house_clon.src.main.home.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

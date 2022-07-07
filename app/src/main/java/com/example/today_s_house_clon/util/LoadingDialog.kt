@@ -6,7 +6,6 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.Window
 import com.example.today_s_house_clon.databinding.DialogLoadingBinding
-import com.example.today_s_house_clon.src.main.store.tab.StoreHomeFragment
 
 class LoadingDialog(context: Context) : Dialog(context) {
     private lateinit var binding: DialogLoadingBinding

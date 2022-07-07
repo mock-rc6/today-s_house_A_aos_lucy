@@ -1,4 +1,4 @@
-package com.example.today_s_house_clon.src.main.home
+package com.example.today_s_house_clon.src.main.home.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

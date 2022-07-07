@@ -14,8 +14,11 @@ import com.example.today_s_house_clon.config.ApplicationClass
 import com.example.today_s_house_clon.config.BaseFragment
 import com.example.today_s_house_clon.databinding.FragmentInterestBinding
 import com.example.today_s_house_clon.src.main.advertisement.HomeAdvertisementAdapter
-import com.example.today_s_house_clon.src.main.advertisement.NestedScrollableHost
 import com.example.today_s_house_clon.src.main.home.*
+import com.example.today_s_house_clon.src.main.home.adapter.HomeCategoryRecyclerViewAdapter
+import com.example.today_s_house_clon.src.main.home.adapter.HomeRankingRecyclerViewAdapter
+import com.example.today_s_house_clon.src.main.home.adapter.HomeTodayDealAdapter
+import com.example.today_s_house_clon.src.main.home.adapter.MainHouseInfoRecyclerAdapter
 import com.example.today_s_house_clon.src.main.home.models.HomeResponse
 import com.example.today_s_house_clon.src.main.recyclerViewAdapter.*
 import com.example.today_s_house_clon.src.main.store.models.StoreResponse

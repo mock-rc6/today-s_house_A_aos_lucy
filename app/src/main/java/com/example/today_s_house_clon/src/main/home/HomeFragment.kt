@@ -6,6 +6,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.today_s_house_clon.R
 import com.example.today_s_house_clon.config.BaseFragment
 import com.example.today_s_house_clon.databinding.FragmentHomeBinding
+import com.example.today_s_house_clon.src.main.home.adapter.HomePagerAdapter
 import com.example.today_s_house_clon.src.main.home.tab.*
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator

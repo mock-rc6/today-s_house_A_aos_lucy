@@ -309,8 +309,10 @@ class JoinActivity : BaseActivity<ActivityJoinBinding>(ActivityJoinBinding::infl
         if(response.code == 1000) {
             // 생성된 jwt sp에 저장
             val jwt = response.result.jwt
+            val userId = response.result.userId
             val editor = ApplicationClass.sSharedPreferences.edit()
             editor.putString("jwt", "$jwt")
+            editor.putLong("userId", userId)
             // 어플 재실행시 로그인 여부 저장
             editor.putBoolean("login", true)
             editor.apply()

@@ -1,5 +1,6 @@
 package com.example.today_s_house_clon.src.main.store.tab
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -15,13 +16,16 @@ import com.example.today_s_house_clon.config.BaseFragment
 import com.example.today_s_house_clon.databinding.FragmentStoreHomeBinding
 import com.example.today_s_house_clon.src.main.advertisement.StoreAdvertisementAdapter
 import com.example.today_s_house_clon.src.main.recyclerViewAdapter.*
-import com.example.today_s_house_clon.src.main.store.StoreCategoryRecyclerViewAdapter
-import com.example.today_s_house_clon.src.main.store.StoreFragmentInterface
+import com.example.today_s_house_clon.src.main.store.ItemDetailsActivity
+import com.example.today_s_house_clon.src.main.store.adapter.StoreCategoryRecyclerViewAdapter
+import com.example.today_s_house_clon.src.main.store.StoreInterface
 import com.example.today_s_house_clon.src.main.store.StoreService
-import com.example.today_s_house_clon.src.main.store.TodaysDealRecyclerAdapter
+import com.example.today_s_house_clon.src.main.store.adapter.TodaysDealRecyclerAdapter
+import com.example.today_s_house_clon.src.main.store.models.DetailResponse
 import com.example.today_s_house_clon.src.main.store.models.StoreResponse
+import com.example.today_s_house_clon.src.main.store.models.TodayDeal
 
-class StoreHomeFragment : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHomeBinding::bind, R.layout.fragment_store_home), StoreFragmentInterface {
+class StoreHome : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHomeBinding::bind, R.layout.fragment_store_home), StoreInterface {
 
     // 광고 인덱스값 > 광고 아이템 수의 절반 중간에서 시작하여 앞뒤 이동시 무한대로 보임
     private var bannerPosition = Int.MAX_VALUE/2
@@ -40,11 +44,8 @@ class StoreHomeFragment : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHo
         // api 연동 바로 시작
         val editor = ApplicationClass.sSharedPreferences
         val jwt = editor.getString("jwt", null)
-        // 기 로그인 사용자 토큰정보 확인 후 api연동
-        if (jwt != null && jwt.isNotEmpty()) {
-            showLoadingDialog(requireContext())
-            StoreService(this, jwt).tryGetStore()
-        }
+        showLoadingDialog(requireContext())
+        StoreService(this).tryGetStore(jwt!!)
 
 
         // 광고어댑터
@@ -83,6 +84,17 @@ class StoreHomeFragment : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHo
         dealAdapter = TodaysDealRecyclerAdapter()
         binding.rvStoreHomeTodayDeal.adapter = dealAdapter
         binding.rvStoreHomeTodayDeal.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+
+        // 오늘의 딜 아이템 클릭 리스너
+        dealAdapter.setOnItemClickListener(object : TodaysDealRecyclerAdapter.OnItemClickListener{
+            override fun onItemClick(v: View, data: TodayDeal, position: Int) {
+                val intent = Intent(requireContext(), ItemDetailsActivity::class.java)
+                intent.putExtra("itemId", data.itemId)
+                startActivity(intent)
+//                showCustomToast("${data.itemId}")
+
+            }
+        })
 
     }
 
@@ -164,7 +176,7 @@ class StoreHomeFragment : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHo
 
     override fun onGetStoreSuccess(response: StoreResponse) {
         dismissLoadingDialog()
-        showCustomToast("성공")
+//        showCustomToast("성공")
         if (response.result.eventImgs.isNotEmpty()) {
 
             val images = response.result.eventImgs.toMutableList()
@@ -179,6 +191,14 @@ class StoreHomeFragment : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHo
         dismissLoadingDialog()
         showCustomToast("실패")
         Log.d("TAG", "에러내용 : $message")
+    }
+
+    override fun onGetItemDetailSuccess(response: DetailResponse) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onGetItemDetailFailure(message: String) {
+        TODO("Not yet implemented")
     }
 
 }

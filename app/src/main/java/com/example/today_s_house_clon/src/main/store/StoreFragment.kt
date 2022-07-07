@@ -1,19 +1,14 @@
 package com.example.today_s_house_clon.src.main.store
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
 import com.example.today_s_house_clon.R
 import com.example.today_s_house_clon.config.BaseFragment
-import com.example.today_s_house_clon.databinding.FragmentHomeBinding
 import com.example.today_s_house_clon.databinding.FragmentStoreBinding
-import com.example.today_s_house_clon.src.main.home.HomePagerAdapter
-import com.example.today_s_house_clon.src.main.home.tab.*
+import com.example.today_s_house_clon.src.main.store.adapter.StorePagerAdapter
 import com.example.today_s_house_clon.src.main.store.tab.StoreAnotherFragment
-import com.example.today_s_house_clon.src.main.store.tab.StoreHomeFragment
+import com.example.today_s_house_clon.src.main.store.tab.StoreHome
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -51,7 +46,7 @@ class StoreFragment : BaseFragment<FragmentStoreBinding>(FragmentStoreBinding::b
     }
 
     private fun addFragment(){
-        pagerAdapter.addFragment(StoreHomeFragment(), "스토어홈")
+        pagerAdapter.addFragment(StoreHome(), "스토어홈")
         pagerAdapter.addFragment(StoreAnotherFragment(), "베스트")
         pagerAdapter.addFragment(StoreAnotherFragment(), "오늘의딜")
         pagerAdapter.addFragment(StoreAnotherFragment(), "7월한정특가")
