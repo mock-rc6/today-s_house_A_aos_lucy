@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.today_s_house_clon.databinding.ItemHomeInterestHorizontalBinding
 import com.example.today_s_house_clon.src.main.home.adapter.HomeCategoryRecyclerViewAdapter.CategoryViewHolder
-import com.example.today_s_house_clon.src.main.recyclerViewAdapter.CategoryVO
+import com.example.today_s_house_clon.src.main.recyclerView.CategoryVO
 
 class HomeCategoryRecyclerViewAdapter(private val categoryList: ArrayList<CategoryVO>): RecyclerView.Adapter<CategoryViewHolder>() {
 

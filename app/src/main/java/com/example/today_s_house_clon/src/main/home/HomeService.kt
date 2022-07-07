@@ -7,9 +7,9 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class HomeService(val interestFragmentInterface: InterestFragmentInterface, private val token: String) {
+class HomeService(val interestFragmentInterface: InterestFragmentInterface) {
 
-    fun tryGetHome() {
+    fun tryGetHome(token: String) {
         val homeRetrofitInterface = ApplicationClass.sRetrofit.create(HomeRetrofitInterface::class.java)
         homeRetrofitInterface.getHome(token).enqueue(object : Callback<HomeResponse>{
             override fun onResponse(call: Call<HomeResponse>, response: Response<HomeResponse>) {
@@ -23,7 +23,7 @@ class HomeService(val interestFragmentInterface: InterestFragmentInterface, priv
         })
     }
 
-    fun tryGetStore(){
+    fun tryGetStore(token: String){
         val homeRetrofitInterface = ApplicationClass.sRetrofit.create(HomeRetrofitInterface::class.java)
         homeRetrofitInterface.getStore(token).enqueue(object : Callback<StoreResponse> {
             override fun onResponse(

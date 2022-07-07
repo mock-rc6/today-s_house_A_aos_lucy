@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.today_s_house_clon.databinding.ItemStoreCategoryBinding
-import com.example.today_s_house_clon.src.main.recyclerViewAdapter.CategoryVO
+import com.example.today_s_house_clon.src.main.recyclerView.CategoryVO
 
 class StoreCategoryRecyclerViewAdapter(private val categoryList: ArrayList<CategoryVO>): RecyclerView.Adapter<StoreCategoryRecyclerViewAdapter.CategoryViewHolder>() {
 

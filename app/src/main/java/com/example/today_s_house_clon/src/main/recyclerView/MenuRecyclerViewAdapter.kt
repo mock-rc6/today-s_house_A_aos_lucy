@@ -1,4 +1,4 @@
-package com.example.today_s_house_clon.src.main.recyclerViewAdapter
+package com.example.today_s_house_clon.src.main.recyclerView
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.today_s_house_clon.databinding.ItemInsideMenuBinding
-import com.example.today_s_house_clon.src.main.recyclerViewAdapter.MenuRecyclerViewAdapter.MenuViewHolder
+import com.example.today_s_house_clon.src.main.recyclerView.MenuRecyclerViewAdapter.MenuViewHolder
 
 class MenuRecyclerViewAdapter(private val menuList: ArrayList<GridMenuVO>): RecyclerView.Adapter<MenuViewHolder>() {
 

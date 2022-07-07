@@ -15,7 +15,7 @@ import com.example.today_s_house_clon.config.ApplicationClass
 import com.example.today_s_house_clon.config.BaseFragment
 import com.example.today_s_house_clon.databinding.FragmentStoreHomeBinding
 import com.example.today_s_house_clon.src.main.advertisement.StoreAdvertisementAdapter
-import com.example.today_s_house_clon.src.main.recyclerViewAdapter.*
+import com.example.today_s_house_clon.src.main.recyclerView.*
 import com.example.today_s_house_clon.src.main.store.ItemDetailsActivity
 import com.example.today_s_house_clon.src.main.store.adapter.StoreCategoryRecyclerViewAdapter
 import com.example.today_s_house_clon.src.main.store.StoreInterface
@@ -76,7 +76,7 @@ class StoreHome : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHomeBindin
 
         // 카테고리 리스트 추가
         addCategoryList()
-        // 카테고리 어댐터 연결
+        // 카테고리 어댑터 연결
         binding.rvStoreHomeCategory.adapter = StoreCategoryRecyclerViewAdapter(categoryList)
         binding.rvStoreHomeCategory.layoutManager = GridLayoutManager(requireContext(),4)
 

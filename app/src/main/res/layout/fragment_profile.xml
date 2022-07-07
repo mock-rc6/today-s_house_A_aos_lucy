@@ -219,12 +219,12 @@
             app:layout_constraintTop_toTopOf="@+id/my_shopping_space"
             app:layout_constraintBottom_toBottomOf="@id/my_shopping_space"
             app:layout_constraintStart_toEndOf="@id/tv_order_count"
-            app:layout_constraintEnd_toStartOf="@+id/tv_clip_count"
+            app:layout_constraintEnd_toStartOf="@+id/tv_coupon_count"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="40dp"/>
 
         <TextView
-            android:id="@+id/tv_clip_count"
+            android:id="@+id/tv_coupon_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
@@ -243,7 +243,7 @@
             android:background="@color/space_color"
             app:layout_constraintTop_toTopOf="@+id/my_shopping_space"
             app:layout_constraintBottom_toBottomOf="@id/my_shopping_space"
-            app:layout_constraintStart_toEndOf="@id/tv_clip_count"
+            app:layout_constraintStart_toEndOf="@id/tv_coupon_count"
             app:layout_constraintEnd_toStartOf="@+id/tv_point"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="40dp"/>
@@ -284,9 +284,9 @@
             android:textColor="@color/text_color_black"
             android:textSize="13sp"
             android:textAlignment="center"
-            app:layout_constraintStart_toStartOf="@+id/tv_clip_count"
+            app:layout_constraintStart_toStartOf="@+id/tv_coupon_count"
             app:layout_constraintTop_toTopOf="@+id/tv_order_count_title"
-            app:layout_constraintEnd_toEndOf="@+id/tv_clip_count"/>
+            app:layout_constraintEnd_toEndOf="@+id/tv_coupon_count"/>
 
         <TextView
             android:id="@+id/tv_point_title"
@@ -357,7 +357,11 @@
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
             app:layout_constraintTop_toBottomOf="@+id/my_page_photo_detail"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            tools:listitem="@layout/item_my_page_photo"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            android:overScrollMode="never"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_add_post"
@@ -499,6 +503,7 @@
                 android:layout_marginStart="@dimen/activity_horizontal_margin"/>
 
             <TextView
+                android:id="@+id/tv_question_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -550,6 +555,7 @@
                 android:layout_marginStart="@dimen/activity_horizontal_margin"/>
 
             <TextView
+                android:id="@+id/tv_review_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"

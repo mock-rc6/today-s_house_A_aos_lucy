@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/bottom_nav_selector_color.xml" value="0.143" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/btn_login_radius_corner.xml" value="0.107" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/custom_dash_background.xml" value="0.16" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/custom_highlight_background.xml" value="0.159" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/custom_login_input.xml" value="0.2045" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/drawable/custom_login_input_background.xml" value="0.1" />
@@ -71,6 +72,8 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/item_home_interest_viewer.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/item_hot_product.xml" value="0.1787037037037037" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/item_interest_product.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/item_my_page_photo.xml" value="0.25" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/item_my_profile_photo.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/item_stars.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/item_store_category.xml" value="0.4" />
         <entry key="..\:/Users/user/AndroidStudioProjects/todays_house_clon/app/src/main/res/layout/item_todays_deal.xml" value="0.25" />

@@ -10,7 +10,6 @@ import com.example.today_s_house_clon.databinding.FragmentMyPageBinding
 import com.example.today_s_house_clon.src.main.myPage.models.MyPageResponse
 import com.example.today_s_house_clon.src.main.myPage.tab.MyShoppingFragment
 import com.example.today_s_house_clon.src.main.myPage.tab.ProfileFragment
-import com.example.today_s_house_clon.src.main.store.StoreService
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -19,6 +18,7 @@ class MyPageFragment : BaseFragment<FragmentMyPageBinding>(FragmentMyPageBinding
     private lateinit var viewPager: ViewPager2
     private lateinit var tabLayout: TabLayout
     private lateinit var pagerAdapter: MyPagePagerAdapter
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -31,6 +31,9 @@ class MyPageFragment : BaseFragment<FragmentMyPageBinding>(FragmentMyPageBinding
         val userId = ApplicationClass.sSharedPreferences.getLong("userId", -1)
         showLoadingDialog(requireContext())
         MyPageService(this).tryGetMyPage(jwt!!, userId)
+
+
+
 
     }
 

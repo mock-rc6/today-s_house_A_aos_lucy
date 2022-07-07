@@ -20,13 +20,12 @@ import com.example.today_s_house_clon.src.main.home.adapter.HomeRankingRecyclerV
 import com.example.today_s_house_clon.src.main.home.adapter.HomeTodayDealAdapter
 import com.example.today_s_house_clon.src.main.home.adapter.MainHouseInfoRecyclerAdapter
 import com.example.today_s_house_clon.src.main.home.models.HomeResponse
-import com.example.today_s_house_clon.src.main.recyclerViewAdapter.*
+import com.example.today_s_house_clon.src.main.recyclerView.*
 import com.example.today_s_house_clon.src.main.store.models.StoreResponse
 
 
 class InterestFragment : BaseFragment<FragmentInterestBinding>(FragmentInterestBinding::bind, R.layout.fragment_interest) , InterestFragmentInterface{
 
-    private var menuList = ArrayList<GridMenuVO>()
     private lateinit var bannerAdapter: HomeAdvertisementAdapter
     private lateinit var houseAdapter: MainHouseInfoRecyclerAdapter
     private lateinit var dealAdapter: HomeTodayDealAdapter
@@ -34,6 +33,7 @@ class InterestFragment : BaseFragment<FragmentInterestBinding>(FragmentInterestB
     private var bannerPosition = Int.MAX_VALUE/2
     private var bannerHandler = BannerHandler()
     private var categoryList = ArrayList<CategoryVO>()
+    private var menuList = ArrayList<GridMenuVO>()
 
     // 2초 후 광고 전환
     private val intervalTime = 2000.toLong()
@@ -45,11 +45,9 @@ class InterestFragment : BaseFragment<FragmentInterestBinding>(FragmentInterestB
         val editor = ApplicationClass.sSharedPreferences
         val jwt = editor.getString("jwt", null).toString()
 
-        if (jwt != null && jwt.isNotEmpty()) {
-            showLoadingDialog(requireContext())
-            HomeService(this, jwt).tryGetHome()
-            HomeService(this, jwt).tryGetStore()
-        }
+        showLoadingDialog(requireContext())
+        HomeService(this).tryGetHome(jwt!!)
+        HomeService(this).tryGetStore(jwt!!)
 
 
         // 광고어댑터
