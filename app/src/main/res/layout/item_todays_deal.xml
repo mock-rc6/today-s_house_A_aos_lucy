@@ -12,14 +12,15 @@
         android:layout_marginEnd="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"/>
 
     <TextView
         android:id="@+id/tv_due"
         android:layout_width="60dp"
         android:layout_height="25dp"
         android:background="@drawable/custom_radius_corner_img"
-        android:backgroundTint="#FF7777"
+        android:backgroundTint="@color/background_highlight"
         android:text="6일 남음"
         android:textSize="12sp"
         android:textColor="@color/white"
@@ -140,7 +141,7 @@
         android:layout_width="35dp"
         android:layout_height="20dp"
         android:background="@drawable/custom_radius_corner_img"
-        android:backgroundTint="#FF7777"
+        android:backgroundTint="@color/background_highlight"
         android:text="특가"
         android:textColor="@color/white"
         android:textStyle="bold"

@@ -1,4 +1,4 @@
-package com.example.today_s_house_clon.src.main.recyclerViewAdapter
+package com.example.today_s_house_clon.src.main.store
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.today_s_house_clon.databinding.ItemTodaysDealBinding
-import com.example.today_s_house_clon.src.main.recyclerViewAdapter.TodaysDealRecyclerAdapter.DealViewHolder
+import com.example.today_s_house_clon.src.main.store.TodaysDealRecyclerAdapter.DealViewHolder
 import com.example.today_s_house_clon.src.main.store.models.TodayDeal
 import java.text.DecimalFormat
 

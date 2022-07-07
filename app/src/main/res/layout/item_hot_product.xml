@@ -125,7 +125,7 @@
         android:layout_width="35dp"
         android:layout_height="20dp"
         android:background="@drawable/custom_radius_corner_img"
-        android:backgroundTint="#FF7777"
+        android:backgroundTint="@color/background_highlight"
         android:text="특가"
         android:textColor="@color/white"
         android:textStyle="bold"

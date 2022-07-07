@@ -8,4 +8,6 @@ interface InterestFragmentInterface {
     fun onGetHomeSuccess(response: HomeResponse)
     fun onGetHomeFailure(message: String)
 
+    fun onGetStoreSuccess(response: StoreResponse)
+    fun onGetStoreFailure(message: String)
 }

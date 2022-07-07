@@ -29,6 +29,8 @@ class StoreFragment : BaseFragment<FragmentStoreBinding>(FragmentStoreBinding::b
         viewPager = binding.storeViewPager
         tabLayout = binding.storeTabLayout
 
+        viewPager.isUserInputEnabled = false
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

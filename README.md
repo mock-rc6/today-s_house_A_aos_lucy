@@ -41,6 +41,7 @@
 - 7/4
   - Appcompat Button databinding error
     - Appcompat Button의 text color 헥스컬러로 변경 하여 해결
+      - color 의 추가한 색상이 아닌 color(night)의 색상을 선택하여 문제가 되었음
   - store api 전 adapter 내 list size = 0
     - adapter 내부에 리스트 추가
     - adapter 내부에 리스트추가 함수 생성
@@ -48,7 +49,17 @@
   - store Fragment UI수정
   - store category UI
   - todo
-    - store 스토어홈탭 UI 완료
-    - home 인기탭 UI 완료
+    - ~~store 스토어홈탭 UI 완료~~
+    - ~~home 인기탭 UI 완료~~
     - store 스토어홈탭 api 완료
-    - mypage fragment UI 완료
+    - ~~mypage fragment UI 완료~~
+- 7/6
+  - todo
+    - store 스토어홈탭 api 완료
+    - home 인기탭 api 완료
+      - api 연결 중 NullPointer error 발생
+        - api 비동기 연결로 인한 List NullPointer >> 연결완료 후 adapter 연결 
+    - 상품상세페이지 UI 완료
+- 7/7
+  - todo
+    - 

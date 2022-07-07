@@ -76,10 +76,5 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
             // 처음 시작시 홈화면이 제일 먼저 시작
             selectedItemId = R.id.home
         }
-
-
     }
-
-
-
 }

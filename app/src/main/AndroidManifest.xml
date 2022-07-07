@@ -14,7 +14,10 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.example.today_s_house_clon.src.main.login.join.JoinActivity"
+            android:name=".src.main.store.ItemDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".src.main.login.join.JoinActivity"
             android:exported="false" />
         <activity
             android:name=".src.main.login.LoginActivity"
@@ -33,7 +36,7 @@
         </activity>
         <activity
             android:name=".src.main.MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
     </application>
 
 </manifest>

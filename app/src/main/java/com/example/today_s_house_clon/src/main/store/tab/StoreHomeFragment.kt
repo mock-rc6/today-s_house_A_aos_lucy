@@ -15,8 +15,10 @@ import com.example.today_s_house_clon.config.BaseFragment
 import com.example.today_s_house_clon.databinding.FragmentStoreHomeBinding
 import com.example.today_s_house_clon.src.main.advertisement.StoreAdvertisementAdapter
 import com.example.today_s_house_clon.src.main.recyclerViewAdapter.*
+import com.example.today_s_house_clon.src.main.store.StoreCategoryRecyclerViewAdapter
 import com.example.today_s_house_clon.src.main.store.StoreFragmentInterface
 import com.example.today_s_house_clon.src.main.store.StoreService
+import com.example.today_s_house_clon.src.main.store.TodaysDealRecyclerAdapter
 import com.example.today_s_house_clon.src.main.store.models.StoreResponse
 
 class StoreHomeFragment : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHomeBinding::bind, R.layout.fragment_store_home), StoreFragmentInterface {
@@ -74,7 +76,7 @@ class StoreHomeFragment : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHo
         // 카테고리 리스트 추가
         addCategoryList()
         // 카테고리 어댐터 연결
-        binding.rvStoreHomeCategory.adapter = CategoryRecyclerViewAdapter(categoryList)
+        binding.rvStoreHomeCategory.adapter = StoreCategoryRecyclerViewAdapter(categoryList)
         binding.rvStoreHomeCategory.layoutManager = GridLayoutManager(requireContext(),4)
 
         // 오늘의 딜

@@ -22,7 +22,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::bind
         viewPager = binding.homeViewPager
         tabLayout = binding.homeTabLayout
 
-
+        // 뷰페이저 스크롤 막기
+        viewPager.isUserInputEnabled = false
 
     }
 
