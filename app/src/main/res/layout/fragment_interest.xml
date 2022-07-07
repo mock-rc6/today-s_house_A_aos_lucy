@@ -240,208 +240,208 @@
             app:layout_constraintTop_toBottomOf="@+id/rv_home_interest_video"
             android:layout_marginTop="20dp"/>
 
-        <include
-            android:id="@+id/include_viewer_photo"
-            layout="@layout/include_viewer_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/home_interest_space_6"/>
+<!--        <include-->
+<!--            android:id="@+id/include_viewer_photo"-->
+<!--            layout="@layout/include_viewer_title"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/home_interest_space_6"/>-->
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_home_interest_photo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/include_viewer_photo"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/item_home_interest_ranking"/>
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rv_home_interest_photo"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/include_viewer_photo"-->
+<!--            android:orientation="horizontal"-->
+<!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--            tools:listitem="@layout/item_home_interest_ranking"/>-->
 
-        <View
-            android:id="@+id/home_interest_space_7"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/space_10"
-            android:background="@color/space_color"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rv_home_interest_photo"
-            android:layout_marginTop="20dp"/>
+<!--        <View-->
+<!--            android:id="@+id/home_interest_space_7"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/space_10"-->
+<!--            android:background="@color/space_color"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/rv_home_interest_photo"-->
+<!--            android:layout_marginTop="20dp"/>-->
 
-        <TextView
-            android:id="@+id/tv_home_interest_title_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="유저들의 인테리어 시공 리뷰"
-            android:textSize="@dimen/title_text"
-            android:textColor="@color/text_color_black"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            app:layout_constraintTop_toBottomOf="@id/home_interest_space_7"
-            android:layout_marginTop="@dimen/between_title_dimen"/>
+<!--        <TextView-->
+<!--            android:id="@+id/tv_home_interest_title_2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="유저들의 인테리어 시공 리뷰"-->
+<!--            android:textSize="@dimen/title_text"-->
+<!--            android:textColor="@color/text_color_black"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:layout_marginStart="@dimen/activity_horizontal_margin"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/home_interest_space_7"-->
+<!--            android:layout_marginTop="@dimen/between_title_dimen"/>-->
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_home_interest_review"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_home_interest_title_2"
-            android:layout_marginTop="@dimen/between_title_dimen"
-            tools:listitem="@layout/item_home_interest_review"
-            android:orientation="vertical"
-            tools:itemCount="3"/>
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rv_home_interest_review"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tv_home_interest_title_2"-->
+<!--            android:layout_marginTop="@dimen/between_title_dimen"-->
+<!--            tools:listitem="@layout/item_home_interest_review"-->
+<!--            android:orientation="vertical"-->
+<!--            tools:itemCount="3"/>-->
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_home_interest_more_1"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:background="@drawable/custom_radius_corner_btn_color_gray"
-            android:text="@string/interest"
-            android:textColor="@color/text_color_black"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rv_home_interest_review"/>
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/btn_home_interest_more_1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginStart="@dimen/activity_horizontal_margin"-->
+<!--            android:layout_marginEnd="@dimen/activity_horizontal_margin"-->
+<!--            android:background="@drawable/custom_radius_corner_btn_color_gray"-->
+<!--            android:text="@string/interest"-->
+<!--            android:textColor="@color/text_color_black"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/rv_home_interest_review"/>-->
 
-        <View
-            android:id="@+id/home_interest_space_8"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/space_10"
-            android:background="@color/space_color"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_home_interest_more_1"
-            android:layout_marginTop="20dp"/>
+<!--        <View-->
+<!--            android:id="@+id/home_interest_space_8"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/space_10"-->
+<!--            android:background="@color/space_color"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/btn_home_interest_more_1"-->
+<!--            android:layout_marginTop="20dp"/>-->
 
-        <TextView
-            android:id="@+id/tv_home_interest_title_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="오늘의 기획전"
-            android:textSize="@dimen/title_text"
-            android:textColor="@color/text_color_black"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            app:layout_constraintTop_toBottomOf="@id/home_interest_space_8"
-            android:layout_marginTop="@dimen/between_title_dimen"/>
+<!--        <TextView-->
+<!--            android:id="@+id/tv_home_interest_title_3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="오늘의 기획전"-->
+<!--            android:textSize="@dimen/title_text"-->
+<!--            android:textColor="@color/text_color_black"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:layout_marginStart="@dimen/activity_horizontal_margin"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/home_interest_space_8"-->
+<!--            android:layout_marginTop="@dimen/between_title_dimen"/>-->
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_home_interest_exhibition"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            app:layout_constraintTop_toBottomOf="@+id/tv_home_interest_title_3"
-            android:layout_marginTop="20dp"/>
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rv_home_interest_exhibition"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:layout_marginStart="@dimen/activity_horizontal_margin"-->
+<!--            android:layout_marginEnd="@dimen/activity_horizontal_margin"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tv_home_interest_title_3"-->
+<!--            android:layout_marginTop="20dp"/>-->
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_home_interest_more_2"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:background="@drawable/custom_radius_corner_btn_color_gray"
-            android:text="기획전 더보기"
-            android:textColor="@color/text_color_black"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rv_home_interest_exhibition"/>
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/btn_home_interest_more_2"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginStart="@dimen/activity_horizontal_margin"-->
+<!--            android:layout_marginEnd="@dimen/activity_horizontal_margin"-->
+<!--            android:background="@drawable/custom_radius_corner_btn_color_gray"-->
+<!--            android:text="기획전 더보기"-->
+<!--            android:textColor="@color/text_color_black"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/rv_home_interest_exhibition"/>-->
 
-        <View
-            android:id="@+id/home_interest_space_9"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/space_10"
-            android:background="@color/space_color"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_home_interest_more_2"
-            android:layout_marginTop="20dp"/>
+<!--        <View-->
+<!--            android:id="@+id/home_interest_space_9"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/space_10"-->
+<!--            android:background="@color/space_color"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/btn_home_interest_more_2"-->
+<!--            android:layout_marginTop="20dp"/>-->
 
-        <TextView
-            android:id="@+id/tv_home_interest_best_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="베스트"
-            android:textColor="@color/text_color_black"
-            android:textStyle="bold"
-            android:textSize="@dimen/title_text"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/home_interest_space_9"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"/>
+<!--        <TextView-->
+<!--            android:id="@+id/tv_home_interest_best_title"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="베스트"-->
+<!--            android:textColor="@color/text_color_black"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="@dimen/title_text"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/home_interest_space_9"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginStart="@dimen/activity_horizontal_margin"/>-->
 
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/ic_arrow"
-            app:layout_constraintTop_toTopOf="@+id/tv_home_interest_best_title"
-            app:layout_constraintBottom_toBottomOf="@id/tv_home_interest_best_title"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+<!--        <ImageView-->
+<!--            android:layout_width="20dp"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:src="@drawable/ic_arrow"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/tv_home_interest_best_title"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/tv_home_interest_best_title"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:layout_marginEnd="@dimen/activity_horizontal_margin"/>-->
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tl_home_interest_bottom"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_home_interest_best_title"
-            android:layout_marginTop="20dp"
-            app:tabMode="scrollable"
-            app:tabIndicatorColor="@color/main_color"
-            app:tabTextColor="@color/black"
-            app:tabSelectedTextColor="@color/main_color"
-            app:tabRippleColor="#00000000"
-            app:tabTextAppearance="@style/tabTextAppearance"
-            app:tabIndicatorFullWidth="false"
-            app:tabGravity="fill"
-            app:tabMinWidth="3dp"/>
+<!--        <com.google.android.material.tabs.TabLayout-->
+<!--            android:id="@+id/tl_home_interest_bottom"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tv_home_interest_best_title"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            app:tabMode="scrollable"-->
+<!--            app:tabIndicatorColor="@color/main_color"-->
+<!--            app:tabTextColor="@color/black"-->
+<!--            app:tabSelectedTextColor="@color/main_color"-->
+<!--            app:tabRippleColor="#00000000"-->
+<!--            app:tabTextAppearance="@style/tabTextAppearance"-->
+<!--            app:tabIndicatorFullWidth="false"-->
+<!--            app:tabGravity="fill"-->
+<!--            app:tabMinWidth="3dp"/>-->
 
-        <!--        뷰페이저-->
+<!--        &lt;!&ndash;        뷰페이저&ndash;&gt;-->
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_home_interest_more_3"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:background="@drawable/custom_radius_corner_btn_color_gray"
-            android:text="베스트셀러 더보기"
-            android:textColor="@color/text_color_black"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tl_home_interest_bottom"
-            android:layout_marginTop="20dp"/>
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/btn_home_interest_more_3"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginStart="@dimen/activity_horizontal_margin"-->
+<!--            android:layout_marginEnd="@dimen/activity_horizontal_margin"-->
+<!--            android:background="@drawable/custom_radius_corner_btn_color_gray"-->
+<!--            android:text="베스트셀러 더보기"-->
+<!--            android:textColor="@color/text_color_black"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/tl_home_interest_bottom"-->
+<!--            android:layout_marginTop="20dp"/>-->
 
-        <View
-            android:id="@+id/home_interest_bottom_divider_1"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/space_color"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_home_interest_more_3"
-            android:layout_marginTop="20dp"/>
+<!--        <View-->
+<!--            android:id="@+id/home_interest_bottom_divider_1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:background="@color/space_color"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/btn_home_interest_more_3"-->
+<!--            android:layout_marginTop="20dp"/>-->
 
         <LinearLayout
             android:id="@+id/ll_home_interest_bottom_info_1"
             android:layout_width="match_parent"
             android:layout_height="180dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/home_interest_bottom_divider_1"
+            app:layout_constraintTop_toBottomOf="@+id/home_interest_space_6"
             app:layout_constraintEnd_toEndOf="parent"
             android:orientation="horizontal">
 
@@ -456,7 +456,7 @@
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:layout_gravity="center"
-                    android:src="@drawable/img_naver_logo"
+                    android:src="@drawable/ic_bottom_1"
                     android:layout_marginTop="30dp"/>
 
                 <TextView
@@ -499,7 +499,7 @@
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:layout_gravity="center"
-                    android:src="@drawable/img_naver_logo"
+                    android:src="@drawable/ic_bottom_2"
                     android:layout_marginTop="30dp"/>
 
                 <TextView
@@ -541,7 +541,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/img_naver_logo"
+                    android:src="@drawable/ic_bottom_3"
                     android:layout_marginTop="30dp"/>
 
                 <TextView

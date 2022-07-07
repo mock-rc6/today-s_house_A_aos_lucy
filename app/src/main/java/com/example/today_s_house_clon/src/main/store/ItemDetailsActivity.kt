@@ -42,6 +42,11 @@ class ItemDetailsActivity : BaseActivity<ActivityItemDetailsBinding>(ActivityIte
         val imageList = response.result.imgList
         Log.d("TAG", "${imageList.size}")
         itemImageAdapter.addImg(imageList)
+        binding.tvDetailItemName1.text = response.result.itemName
+        binding.tvDetailItemName2.text = response.result.itemName
+        binding.tvDetailCompanyName.text = response.result.companyName
+
+
 
         setDetailImageUi()
     }

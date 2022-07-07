@@ -14,6 +14,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".src.main.home.EventActivity"
+            android:exported="false" />
+        <activity
             android:name=".src.main.basket.BasketActivity"
             android:exported="false" />
         <activity

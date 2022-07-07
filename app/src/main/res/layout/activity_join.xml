@@ -352,7 +352,7 @@
 
                     <CheckBox
                         android:id="@+id/join_check_3"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent" />
 
                 </LinearLayout>
@@ -384,7 +384,7 @@
 
                     <CheckBox
                         android:id="@+id/join_check_4"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent" />
 
                 </LinearLayout>

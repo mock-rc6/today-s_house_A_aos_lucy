@@ -57,6 +57,7 @@
                         android:layout_marginStart="@dimen/activity_horizontal_margin" />
 
                     <TextView
+                        android:id="@+id/tv_detail_item_name_1"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:text="상품명"
@@ -235,7 +236,7 @@
                 android:background="#00FFFFFF"/>
 
             <TextView
-                android:id="@+id/tv_detail_item_name"
+                android:id="@+id/tv_detail_item_name_2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="상품명"
@@ -252,8 +253,8 @@
                 layout="@layout/item_stars"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/tv_detail_item_name"
-                app:layout_constraintStart_toStartOf="@+id/tv_detail_item_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_detail_item_name_2"
+                app:layout_constraintStart_toStartOf="@+id/tv_detail_item_name_2"
                 android:layout_marginTop="10dp"/>
 
             <TextView

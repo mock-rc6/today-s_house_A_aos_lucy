@@ -17,6 +17,7 @@ import com.example.today_s_house_clon.databinding.FragmentProfileBinding
 import com.example.today_s_house_clon.src.main.advertisement.HomeAdvertisementAdapter
 import com.example.today_s_house_clon.src.main.home.HomeService
 import com.example.today_s_house_clon.src.main.home.InterestFragmentInterface
+import com.example.today_s_house_clon.src.main.home.models.EventResponse
 import com.example.today_s_house_clon.src.main.home.models.HomeResponse
 import com.example.today_s_house_clon.src.main.myPage.MyPageInterface
 import com.example.today_s_house_clon.src.main.myPage.MyPageRetrofitInterface
@@ -172,6 +173,14 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
     }
 
     override fun onGetStoreFailure(message: String) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onGetEventSuccess(response: EventResponse) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onGetEventFailure(message: String) {
         TODO("Not yet implemented")
     }
 

@@ -1,10 +1,12 @@
 package com.example.today_s_house_clon.src.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.example.today_s_house_clon.R
 import com.example.today_s_house_clon.config.BaseActivity
 import com.example.today_s_house_clon.databinding.ActivityMainBinding
+import com.example.today_s_house_clon.src.main.basket.BasketActivity
 import com.example.today_s_house_clon.src.main.home.HomeFragment
 import com.example.today_s_house_clon.src.main.homeService.HomeServiceFragment
 import com.example.today_s_house_clon.src.main.myPage.MyPageFragment
@@ -75,6 +77,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
             // 처음 시작시 홈화면이 제일 먼저 시작
             selectedItemId = R.id.home
+        }
+
+        binding.btnBasket.setOnClickListener {
+            val intent = Intent(this, BasketActivity::class.java)
+            startActivity(intent)
         }
     }
 }

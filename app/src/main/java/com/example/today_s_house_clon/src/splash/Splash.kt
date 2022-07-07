@@ -16,10 +16,12 @@ class Splash : BaseActivity<ActivitySplashBinding>(ActivitySplashBinding::inflat
         super.onCreate(savedInstanceState)
         val login = ApplicationClass.sSharedPreferences.getBoolean("login", false)
         val editor = ApplicationClass.sSharedPreferences.edit()
-//        editor.remove("login")
-//        editor.remove("jwt")
-//        editor.clear()
-//        editor.apply()
+        editor.remove("login")
+        editor.remove("jwt")
+        editor.remove("userId")
+        editor.remove("itemId")
+        editor.clear()
+        editor.apply()
 
         // 로그인 여부에 따라 splash 화면 뒤 보여지는 activity 다름
         if (!login) {

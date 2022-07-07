@@ -1,5 +1,6 @@
 package com.example.today_s_house_clon.src.main.home.tab
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -19,8 +20,11 @@ import com.example.today_s_house_clon.src.main.home.adapter.HomeCategoryRecycler
 import com.example.today_s_house_clon.src.main.home.adapter.HomeRankingRecyclerViewAdapter
 import com.example.today_s_house_clon.src.main.home.adapter.HomeTodayDealAdapter
 import com.example.today_s_house_clon.src.main.home.adapter.MainHouseInfoRecyclerAdapter
+import com.example.today_s_house_clon.src.main.home.models.EventInfo
+import com.example.today_s_house_clon.src.main.home.models.EventResponse
 import com.example.today_s_house_clon.src.main.home.models.HomeResponse
 import com.example.today_s_house_clon.src.main.recyclerView.*
+import com.example.today_s_house_clon.src.main.store.ItemDetailsActivity
 import com.example.today_s_house_clon.src.main.store.models.StoreResponse
 
 
@@ -72,6 +76,14 @@ class InterestFragment : BaseFragment<FragmentInterestBinding>(FragmentInterestB
             })
         }
 
+        // 광고 이벤트 클릭 리스너
+        bannerAdapter.setOnItemClickListener(object: HomeAdvertisementAdapter.OnItemClickListener{
+            override fun onItemClick(v: View, data: EventInfo, position: Int) {
+                val intent = Intent(requireContext(), EventActivity::class.java)
+                startActivity(intent)
+            }
+        })
+
 
         // 메뉴 리스트 추가
         addMenuList()
@@ -87,6 +99,8 @@ class InterestFragment : BaseFragment<FragmentInterestBinding>(FragmentInterestB
         houseAdapter = MainHouseInfoRecyclerAdapter()
         dealAdapter = HomeTodayDealAdapter()
         rankingAdapter = HomeRankingRecyclerViewAdapter()
+
+
     }
 
     private fun setHouseUI() {
@@ -223,6 +237,14 @@ class InterestFragment : BaseFragment<FragmentInterestBinding>(FragmentInterestB
         dismissLoadingDialog()
         showCustomToast("실패")
         Log.d("TAG", "에러내용 : $message")
+    }
+
+    override fun onGetEventSuccess(response: EventResponse) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onGetEventFailure(message: String) {
+        TODO("Not yet implemented")
     }
 
 }
