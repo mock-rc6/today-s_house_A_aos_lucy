@@ -8,9 +8,9 @@ import retrofit2.Response
 
 class BasketService(val basketInterface: BasketInterface) {
 
-    fun tryGetBasket(token: String){
+    fun tryGetBasket(token: String,user: Long){
         val basketRetrofitInterface = ApplicationClass.sRetrofit.create(BasketRetrofitInterface::class.java)
-        basketRetrofitInterface.getStore(token).enqueue(object :
+        basketRetrofitInterface.getStore(token,user).enqueue(object :
             Callback<BasketResponse> {
             override fun onResponse(
                 call: Call<BasketResponse>, response: Response<BasketResponse>

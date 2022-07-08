@@ -19,7 +19,9 @@
 
     <dimen name="score_text_small">11sp</dimen>
     <dimen name="score_text_large">35sp</dimen>
-<!--    <dimen name="score_"></dimen>-->
-<!--    <dimen name="score_"></dimen>-->
+
+
+    <dimen name="setting_margin">10dp</dimen>
+    <dimen name="setting_text">15sp</dimen>
 
 </resources>

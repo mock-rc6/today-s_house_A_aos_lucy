@@ -10,6 +10,7 @@ import com.example.today_s_house_clon.src.main.basket.BasketActivity
 import com.example.today_s_house_clon.src.main.home.HomeFragment
 import com.example.today_s_house_clon.src.main.homeService.HomeServiceFragment
 import com.example.today_s_house_clon.src.main.myPage.MyPageFragment
+import com.example.today_s_house_clon.src.main.myPage.SettingActivity
 import com.example.today_s_house_clon.src.main.store.StoreFragment
 
 class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate) {
@@ -81,6 +82,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
         binding.btnBasket.setOnClickListener {
             val intent = Intent(this, BasketActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnSetting.setOnClickListener {
+            val intent = Intent(this, SettingActivity::class.java)
             startActivity(intent)
         }
     }

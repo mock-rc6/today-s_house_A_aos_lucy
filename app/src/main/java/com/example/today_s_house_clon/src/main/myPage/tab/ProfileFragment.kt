@@ -24,6 +24,7 @@ import com.example.today_s_house_clon.src.main.myPage.MyPageRetrofitInterface
 import com.example.today_s_house_clon.src.main.myPage.MyPageService
 import com.example.today_s_house_clon.src.main.myPage.adapter.MyPageAddPhotoRecyclerViewAdapter
 import com.example.today_s_house_clon.src.main.myPage.models.MyPageResponse
+import com.example.today_s_house_clon.src.main.myPage.models.PasswordResponse
 import com.example.today_s_house_clon.src.main.recyclerView.GridMenuVO
 import com.example.today_s_house_clon.src.main.recyclerView.RecyclerViewHeight
 import com.example.today_s_house_clon.src.main.recyclerView.RecyclerViewWidth
@@ -116,6 +117,14 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
     override fun onGetMyPageFailure(message: String) {
         dismissLoadingDialog()
         showCustomToast("실패")
+    }
+
+    override fun onGetChangePasswordSuccess(response: PasswordResponse) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onGetChangePasswordFailure(message: String) {
+        TODO("Not yet implemented")
     }
 
     // 광고 자동 스크롤 시작 함수

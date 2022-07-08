@@ -14,8 +14,9 @@ class BasketActivity :BaseActivity<ActivityBasketBinding>(ActivityBasketBinding:
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val jwt = ApplicationClass.sSharedPreferences.getString("jwt", null)
+        val userId = ApplicationClass.sSharedPreferences.getLong("userId", 0)
         showLoadingDialog(this)
-        BasketService(this).tryGetBasket(jwt!!)
+        BasketService(this).tryGetBasket(jwt!!,userId)
 
     }
 

@@ -8,6 +8,7 @@ import com.example.today_s_house_clon.config.ApplicationClass
 import com.example.today_s_house_clon.config.BaseFragment
 import com.example.today_s_house_clon.databinding.FragmentMyPageBinding
 import com.example.today_s_house_clon.src.main.myPage.models.MyPageResponse
+import com.example.today_s_house_clon.src.main.myPage.models.PasswordResponse
 import com.example.today_s_house_clon.src.main.myPage.tab.MyShoppingFragment
 import com.example.today_s_house_clon.src.main.myPage.tab.ProfileFragment
 import com.google.android.material.tabs.TabLayout
@@ -68,5 +69,13 @@ class MyPageFragment : BaseFragment<FragmentMyPageBinding>(FragmentMyPageBinding
     override fun onGetMyPageFailure(message: String) {
         dismissLoadingDialog()
         showCustomToast("실패")
+    }
+
+    override fun onGetChangePasswordSuccess(response: PasswordResponse) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onGetChangePasswordFailure(message: String) {
+        TODO("Not yet implemented")
     }
 }
