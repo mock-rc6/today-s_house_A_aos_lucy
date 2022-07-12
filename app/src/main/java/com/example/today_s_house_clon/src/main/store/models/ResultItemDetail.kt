@@ -9,6 +9,7 @@ data class ResultItemDetail(
     @SerializedName("companyName") val companyName: String,
     @SerializedName("score") val score: Double,
     @SerializedName("reviewCnt") val reviewCnt: Int,
+    @SerializedName("saleRate") val saleRate: String,
     @SerializedName("price") val price: String,
     @SerializedName("scrapCnt") val scrapCnt: Int,
     @SerializedName("reviewList") val reviewList: List<ReviewList>,

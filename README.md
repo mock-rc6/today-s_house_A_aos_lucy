@@ -59,7 +59,12 @@
     - home 인기탭 api 완료
       - api 연결 중 NullPointer error 발생
         - api 비동기 연결로 인한 List NullPointer >> 연결완료 후 adapter 연결 
-    - 상품상세페이지 UI 완료
+    - ~~상품상세페이지 UI 완료~~
 - 7/7
   - todo
-    - 
+    - 장바구니 UI 완료
+    - 장바구니 api완료
+    - 장바구니 아이콘 클릭리스너
+    - ~~마이페이지 UI 완료~~
+    - ~~마이페이지 api완료~~
+    - 상품상세페이지 api완료

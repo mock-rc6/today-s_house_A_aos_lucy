@@ -60,6 +60,8 @@
                         android:id="@+id/tv_detail_item_name_1"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:singleLine="true"
                         android:text="상품명"
                         android:textSize="@dimen/title_text"
                         android:textStyle="bold"
@@ -428,7 +430,9 @@
                 android:layout_height="80dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/detail_divider_3"/>
+                app:layout_constraintTop_toBottomOf="@+id/detail_divider_3"
+                android:background="@drawable/img_ad_detail"
+                android:scaleType="fitXY"/>
 
             <View
                 android:id="@+id/detail_divider_4"
@@ -586,7 +590,45 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/detail_divider_6"
-                android:overScrollMode="never"/>
+                android:overScrollMode="never"
+                app:tabIndicatorColor="@color/main_color"
+                app:tabTextColor="@color/black"
+                app:tabSelectedTextColor="@color/main_color"
+                app:tabRippleColor="#00000000"
+                app:tabTextAppearance="@style/tabTextAppearance"
+                app:tabIndicatorFullWidth="true"
+                app:tabGravity="fill"
+                app:tabMinWidth="3dp"
+                android:background="@color/white"
+                >
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="상품정보"/>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="리뷰"/>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="문의"/>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="배송/환불"/>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="추천"/>
+
+            </com.google.android.material.tabs.TabLayout>
+
 <!--            리사이클러뷰 추가 수정-->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_detail_item_list"
@@ -595,7 +637,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tl_detail"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+
+                />
 
             <View
                 android:id="@+id/detail_divider_7"
@@ -652,15 +696,15 @@
                 android:layout_marginTop="20dp"/>
 
 <!--            recyclerview 추가 수정 / 리뷰사진-->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_detail_review_image"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginStart="@dimen/activity_horizontal_margin"
-                app:layout_constraintTop_toBottomOf="@+id/detail_total_score"
-                android:layout_marginTop="20dp"/>
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/rv_detail_review_image"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="100dp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                android:layout_marginStart="@dimen/activity_horizontal_margin"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/detail_total_score"-->
+<!--                android:layout_marginTop="20dp"/>-->
 
             <!--            recyclerview 추가 수정 / 리뷰-->
             <androidx.recyclerview.widget.RecyclerView
@@ -670,18 +714,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginStart="@dimen/activity_horizontal_margin"
-                app:layout_constraintTop_toBottomOf="@+id/rv_detail_review_image"
+                app:layout_constraintTop_toBottomOf="@+id/detail_total_score"
                 android:layout_marginTop="20dp"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_detail_more_review"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:background="@drawable/custom_radius_corner_btn_color_main"
                 android:layout_marginStart="@dimen/activity_horizontal_margin"
                 android:layout_marginEnd="@dimen/activity_horizontal_margin"
                 app:layout_constraintTop_toBottomOf="@id/rv_detail_review"
-                android:layout_marginTop="20dp"
                 android:text="리뷰 더보기 (1,000 )"
                 android:textStyle="bold"
                 android:textSize="17sp"
@@ -713,7 +756,7 @@
                 android:id="@+id/tv_detail_question_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="6000"
+                android:text="0"
                 android:textSize="17sp"
                 android:textStyle="bold"
                 android:textColor="@color/main_color"

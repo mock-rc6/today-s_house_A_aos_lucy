@@ -90,9 +90,9 @@ class StoreHome : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHomeBindin
             override fun onItemClick(v: View, data: TodayDeal, position: Int) {
                 val intent = Intent(requireContext(), ItemDetailsActivity::class.java)
                 intent.putExtra("itemId", data.itemId)
-//                Log.d("TAG", "id형식: ${data.itemId.javaClass.name} / id값: ${data.itemId}")
+                intent.putExtra("due", data.due)
                 startActivity(intent)
-//                showCustomToast("${data.itemId}")
+
 
             }
         })

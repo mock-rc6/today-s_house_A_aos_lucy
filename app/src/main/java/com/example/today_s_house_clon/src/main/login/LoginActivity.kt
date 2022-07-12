@@ -98,7 +98,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::i
             val jwt = response.result.jwt
             val userId = response.result.userId
             val editor = ApplicationClass.sSharedPreferences.edit()
-            editor.putString("jwt", "$jwt")
+            editor.putString("jwt", jwt)
             editor.putLong("userId", userId)
             // 어플 재실행시 로그인 여부 저장
             editor.putBoolean("login", true)

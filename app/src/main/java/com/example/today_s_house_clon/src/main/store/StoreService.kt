@@ -28,8 +28,6 @@ class StoreService(val storeInterface: StoreInterface) {
     }
 
     fun tryGetItemDetail( token: String, itemId: Long, userId: Long){
-        Log.d("TAG", "${itemId.javaClass.name}")
-
         val storeRetrofitInterface = ApplicationClass.sRetrofit.create(StoreRetrofitInterface::class.java)
         storeRetrofitInterface.getItemDetail(token, itemId, userId).enqueue(object :
             Callback<DetailResponse> {

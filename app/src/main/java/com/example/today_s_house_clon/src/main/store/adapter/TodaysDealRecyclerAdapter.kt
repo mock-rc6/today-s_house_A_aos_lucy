@@ -42,6 +42,7 @@ class TodaysDealRecyclerAdapter(): RecyclerView.Adapter<DealViewHolder>() {
             if (pos != RecyclerView.NO_POSITION) {
                 itemView.setOnClickListener {
                     listener?.onItemClick(itemView, deal, pos)
+
                 }
             }
 
