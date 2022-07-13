@@ -1,12 +1,16 @@
 package com.example.today_s_house_clon.src.main.store
 
 import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
+import android.widget.LinearLayout
 import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.today_s_house_clon.R
 import com.example.today_s_house_clon.config.ApplicationClass
@@ -18,10 +22,8 @@ import com.example.today_s_house_clon.src.main.store.adapter.ItemDetailImagePage
 import com.example.today_s_house_clon.src.main.store.adapter.ItemDetailViewRecyclerViewAdapter
 import com.example.today_s_house_clon.src.main.store.adapter.ReviewImageRecyclerViewAdapter
 import com.example.today_s_house_clon.src.main.store.adapter.ReviewRecyclerAdapter
-import com.example.today_s_house_clon.src.main.store.models.DetailResponse
-import com.example.today_s_house_clon.src.main.store.models.RequestSelectItem
-import com.example.today_s_house_clon.src.main.store.models.SelectItemResponse
-import com.example.today_s_house_clon.src.main.store.models.StoreResponse
+import com.example.today_s_house_clon.src.main.store.models.*
+import okhttp3.internal.notify
 
 class ItemDetailsActivity : BaseActivity<ActivityItemDetailsBinding>(ActivityItemDetailsBinding::inflate), StoreInterface {
 
@@ -34,8 +36,10 @@ class ItemDetailsActivity : BaseActivity<ActivityItemDetailsBinding>(ActivityIte
         super.onCreate(savedInstanceState)
 
         val itemId = intent.getLongExtra("itemId", 0)
+        ApplicationClass.sSharedPreferences.edit().putLong("itemId", itemId)
         val userId = ApplicationClass.sSharedPreferences.getLong("userId", 0)
         val jwt = ApplicationClass.sSharedPreferences.getString("jwt", null)
+
         showLoadingDialog(this)
         StoreService(this).tryGetItemDetail(jwt!!, itemId, userId)
 
@@ -59,12 +63,17 @@ class ItemDetailsActivity : BaseActivity<ActivityItemDetailsBinding>(ActivityIte
                     val select = RequestSelectItem(optionId,number)
                 }
 
+                override fun onTouchOption(rv: RecyclerView) {
+                    if (rv.visibility == View.GONE){
+                        rv.visibility = View.VISIBLE
+                        // 비용 숨김
+                    }else {
+                        rv.visibility = View.GONE
+                    }
+                }
 
             })
-
-
         }
-
     }
 
     private fun setDetailImageUi(){
@@ -131,6 +140,14 @@ class ItemDetailsActivity : BaseActivity<ActivityItemDetailsBinding>(ActivityIte
         showCustomToast("실패")
     }
 
+    override fun onGetItemOptionSuccess(response: SelectItemOptionResponse) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onGetItemOptionFailure(message: String) {
+        TODO("Not yet implemented")
+    }
+
 
     override fun onGetStoreSuccess(response: StoreResponse) {
         TODO("Not yet implemented")
@@ -141,3 +158,4 @@ class ItemDetailsActivity : BaseActivity<ActivityItemDetailsBinding>(ActivityIte
     }
 
 }
+

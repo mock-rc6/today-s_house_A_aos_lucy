@@ -16,4 +16,6 @@ interface StoreRetrofitInterface {
     @POST("/app/store/{userId}/items")
     fun putInBasket(@Header ("X-ACCESS-TOKEN") token: String, @Path ("userId") userId: Long, @Body params: RequestSelectItem, @Query("id") id: Long): Call<SelectItemResponse>
 
+    @GET("/app/store/{userId}/items")
+    fun getItemOption(@Header ("X-ACCESS-TOKEN") token: String, @Path ("userId") userId: Long, @Query("id") id: Long): Call<SelectItemOptionResponse>
 }

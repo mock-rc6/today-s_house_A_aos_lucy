@@ -21,10 +21,7 @@ import com.example.today_s_house_clon.src.main.store.adapter.StoreCategoryRecycl
 import com.example.today_s_house_clon.src.main.store.StoreInterface
 import com.example.today_s_house_clon.src.main.store.StoreService
 import com.example.today_s_house_clon.src.main.store.adapter.TodaysDealRecyclerAdapter
-import com.example.today_s_house_clon.src.main.store.models.DetailResponse
-import com.example.today_s_house_clon.src.main.store.models.SelectItemResponse
-import com.example.today_s_house_clon.src.main.store.models.StoreResponse
-import com.example.today_s_house_clon.src.main.store.models.TodayDeal
+import com.example.today_s_house_clon.src.main.store.models.*
 
 class StoreHome : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHomeBinding::bind, R.layout.fragment_store_home), StoreInterface {
 
@@ -92,6 +89,7 @@ class StoreHome : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHomeBindin
                 val intent = Intent(requireContext(), ItemDetailsActivity::class.java)
                 intent.putExtra("itemId", data.itemId)
                 intent.putExtra("due", data.due)
+                ApplicationClass.sSharedPreferences.edit().putString("image", data.hotDealThumbnail)
                 startActivity(intent)
 
 
@@ -208,6 +206,14 @@ class StoreHome : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHomeBindin
     }
 
     override fun onPutInBasketFailure(message: String) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onGetItemOptionSuccess(response: SelectItemOptionResponse) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onGetItemOptionFailure(message: String) {
         TODO("Not yet implemented")
     }
 

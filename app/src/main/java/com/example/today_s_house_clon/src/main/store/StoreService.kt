@@ -61,4 +61,22 @@ class StoreService(val storeInterface: StoreInterface) {
         })
     }
 
+    fun tryGetItemOption(token: String, userId: Long, itemId: Long){
+        val getItemOptionRetrofitInterface = ApplicationClass.sRetrofit.create(StoreRetrofitInterface::class.java)
+        getItemOptionRetrofitInterface.getItemOption(token, userId , itemId).enqueue(object:
+            Callback<SelectItemOptionResponse>{
+            override fun onResponse(
+                call: Call<SelectItemOptionResponse>,
+                response: Response<SelectItemOptionResponse>
+            ) {
+                storeInterface.onGetItemOptionSuccess(response.body() as SelectItemOptionResponse)
+            }
+
+            override fun onFailure(call: Call<SelectItemOptionResponse>, t: Throwable) {
+                storeInterface.onGetItemOptionFailure(t.message ?: "통신오류")
+            }
+
+        })
+    }
+
 }
