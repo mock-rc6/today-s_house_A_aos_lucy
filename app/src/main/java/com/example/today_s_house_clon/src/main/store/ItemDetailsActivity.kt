@@ -1,10 +1,14 @@
 package com.example.today_s_house_clon.src.main.store
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
+import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
+import com.example.today_s_house_clon.R
 import com.example.today_s_house_clon.config.ApplicationClass
 import com.example.today_s_house_clon.config.BaseActivity
 import com.example.today_s_house_clon.databinding.ActivityItemDetailsBinding
@@ -15,6 +19,8 @@ import com.example.today_s_house_clon.src.main.store.adapter.ItemDetailViewRecyc
 import com.example.today_s_house_clon.src.main.store.adapter.ReviewImageRecyclerViewAdapter
 import com.example.today_s_house_clon.src.main.store.adapter.ReviewRecyclerAdapter
 import com.example.today_s_house_clon.src.main.store.models.DetailResponse
+import com.example.today_s_house_clon.src.main.store.models.RequestSelectItem
+import com.example.today_s_house_clon.src.main.store.models.SelectItemResponse
 import com.example.today_s_house_clon.src.main.store.models.StoreResponse
 
 class ItemDetailsActivity : BaseActivity<ActivityItemDetailsBinding>(ActivityItemDetailsBinding::inflate), StoreInterface {
@@ -37,7 +43,27 @@ class ItemDetailsActivity : BaseActivity<ActivityItemDetailsBinding>(ActivityIte
         reviewImageImageAdapter = ReviewImageRecyclerViewAdapter()
         detailImageAdapter = ItemDetailViewRecyclerViewAdapter()
         reviewAdapter = ReviewRecyclerAdapter()
-        // 구매하기 클릭 리스너
+
+        binding.btnBuy.setOnClickListener {
+            val customDialog = CustomDialog(this)
+            customDialog.showDialog()
+
+            customDialog.setOnclickListener(object: CustomDialog.ButtonClickListener{
+
+                override fun onInMyBasketClicked(optionId: Long, number: Int) {
+                    val select = RequestSelectItem(optionId,number)
+                    StoreService(this@ItemDetailsActivity).tryPutInBasket(jwt, userId, select, itemId)
+                }
+
+                override fun onBuyNowClicked(optionId: Long, number: Int) {
+                    val select = RequestSelectItem(optionId,number)
+                }
+
+
+            })
+
+
+        }
 
     }
 
@@ -86,6 +112,21 @@ class ItemDetailsActivity : BaseActivity<ActivityItemDetailsBinding>(ActivityIte
     }
 
     override fun onGetItemDetailFailure(message: String) {
+        dismissLoadingDialog()
+        showCustomToast("실패")
+    }
+
+    override fun onPutInBasketSuccess(response: SelectItemResponse) {
+        dismissLoadingDialog()
+        val cord = response.code
+        val message = response.message
+        showCustomToast("장바구니에 담겼습니다.")
+        showCustomToast("$cord")
+        showCustomToast("$message")
+
+    }
+
+    override fun onPutInBasketFailure(message: String) {
         dismissLoadingDialog()
         showCustomToast("실패")
     }

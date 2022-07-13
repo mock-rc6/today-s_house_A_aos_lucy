@@ -22,6 +22,7 @@ import com.example.today_s_house_clon.src.main.store.StoreInterface
 import com.example.today_s_house_clon.src.main.store.StoreService
 import com.example.today_s_house_clon.src.main.store.adapter.TodaysDealRecyclerAdapter
 import com.example.today_s_house_clon.src.main.store.models.DetailResponse
+import com.example.today_s_house_clon.src.main.store.models.SelectItemResponse
 import com.example.today_s_house_clon.src.main.store.models.StoreResponse
 import com.example.today_s_house_clon.src.main.store.models.TodayDeal
 
@@ -199,6 +200,14 @@ class StoreHome : BaseFragment<FragmentStoreHomeBinding>(FragmentStoreHomeBindin
     }
 
     override fun onGetItemDetailFailure(message: String) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onPutInBasketSuccess(response: SelectItemResponse) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onPutInBasketFailure(message: String) {
         TODO("Not yet implemented")
     }
 
